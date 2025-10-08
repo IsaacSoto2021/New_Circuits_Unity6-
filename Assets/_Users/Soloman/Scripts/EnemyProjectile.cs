@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyProjectile : MonoBehaviour
 {
     public float lifetime = 5f;
 
+    public int damage = 20;
     void Start()
     {
         Destroy(gameObject, lifetime);
@@ -16,6 +18,15 @@ public class EnemyProjectile : MonoBehaviour
         if (collision.CompareTag("Enemy") || (collision.CompareTag("PlayerProjectile")))
         {
             return;
+        }
+        else if (collision.CompareTag("Player"))
+        {
+            PlayerData.Instance._Hp -= damage;
+            if (PlayerData.Instance._Hp <= 0)
+            {
+                SceneManager.LoadScene(0);
+                PlayerData.Instance.LoseTempScrap();
+            }
         }
         else
         {

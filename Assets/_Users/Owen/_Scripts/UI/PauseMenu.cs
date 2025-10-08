@@ -8,17 +8,19 @@ public class PauseMenu : MonoBehaviour
     public GameObject _PauseCanvas;
     public GameObject _HUDCanvas;
     public GameObject _ConfirmAbandonCanvas;
+    public GameObject _touchCanvas;
 
 
-    void Update()
+    private void Start()
     {
-
+        Pause();
     }
 
     public void Pause()
     {
         _PauseCanvas.SetActive(true);
         _HUDCanvas.SetActive(false);
+        _touchCanvas.SetActive(false);
         Time.timeScale = 0;
     }
 
@@ -26,6 +28,7 @@ public class PauseMenu : MonoBehaviour
     {
         _PauseCanvas.SetActive(false);
         _HUDCanvas.SetActive(true);
+        _touchCanvas.SetActive(true);
         Time.timeScale = 1.0f;
     }
 

@@ -1,24 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
+    [SerializeField] NavMeshAgent Player;
+    [SerializeField] GameObject _playerControllerPrefab;
 
-    public GameObject _playerControllerPrefab;
+    [SerializeField] Vector3 _spawnPoint;
 
-    public Transform _spawnPoint;
-    void Update()
-    {
-
-    }
     private void Start()
     {
+        DontDestroyOnLoad(this);
+        ResetPos();
     }
     public void ResetPos()
     {
-        _playerControllerPrefab.transform.position = _spawnPoint.transform.position;
+        Player.Warp(_spawnPoint);
         PlayerData.Instance.SetValues();
     }
     public void Quit()

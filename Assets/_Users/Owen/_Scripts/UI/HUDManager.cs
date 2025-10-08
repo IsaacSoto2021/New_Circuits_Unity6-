@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class HUDManager : MonoBehaviour
 {
+    public GameObject _pauseMenu;
 
     public TMP_Text _HpText;
     public TMP_Text _ScrapText;

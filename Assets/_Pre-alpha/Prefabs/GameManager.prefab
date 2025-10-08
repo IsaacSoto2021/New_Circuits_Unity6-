@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 897768034816430810}
   - component: {fileID: 6529166650941613126}
+  - component: {fileID: 2686249232162998596}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -45,10 +46,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 430134da9e5d33941acf62db1537adac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnWave: 0
-  _playerControllerPrefab: {fileID: 1723404739954432939, guid: 44502063036b4984f8833f7ecc3935ce,
-    type: 3}
-  _spawnPoint: {fileID: 8036839896410654337}
+  Player: {fileID: 7553875999705753665, guid: db99381695efa514d8cbc2f09b7285c2, type: 3}
+  _playerControllerPrefab: {fileID: 59692888133242117, guid: 44502063036b4984f8833f7ecc3935ce, type: 3}
+  _pauseCanvas: {fileID: 5235759948190005558, guid: c5c85e74ca3d6d6488edf475f4eab23f, type: 3}
+  _spawnPoint: {x: 0, y: 0, z: 0}
+--- !u!114 &2686249232162998596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4900675841718003329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e1860659d0c52546aace1ae1e945796, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerData
+  _maxHp: 100
+  _Hp: 0
+  _hpTier: 1
+  _scrap: 0
+  _damage: 50
+  _moveSpeed: 3
+  _scrapToAdd: 0
+  _hasKeycard: 0
 --- !u!1 &5622984280112376302
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,7 +95,7 @@ Transform:
   m_GameObject: {fileID: 5622984280112376302}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 9, z: -1.5}
+  m_LocalPosition: {x: 3.7, y: 1.53, z: 1.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
