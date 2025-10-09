@@ -19,6 +19,7 @@ public class PlayerData : Singleton<PlayerData>
     public void SetValues()
     {
         _Hp = _maxHp;
+        Debug.Log("setvals");
     }
 
     private void Start()
