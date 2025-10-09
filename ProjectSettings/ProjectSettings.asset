@@ -270,8 +270,8 @@ PlayerSettings:
   AndroidTargetArchitectures: 2
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/xarlo/OneDrive/Desktop/Unity_MainFiles/Keystore_Update/Circuits_Keystore_01/user.keystore
-  AndroidKeyaliasName: wire
+  AndroidKeystoreName: C:/Users/oajoh/OneDrive/Desktop/Circuits_keystore_DONOTDELETE/user.keystore
+  AndroidKeyaliasName: 
   AndroidEnableArmv9SecurityFeatures: 0
   AndroidEnableArm64MTE: 0
   AndroidBuildApkPerCpuArchitecture: 0
