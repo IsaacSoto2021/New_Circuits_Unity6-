@@ -6,8 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
-    [SerializeField] NavMeshAgent Player;
-    [SerializeField] GameObject _playerControllerPrefab;
+    public NavMeshAgent Player;
 
     [SerializeField] Vector3 _spawnPoint;
 
@@ -15,6 +14,7 @@ public class GameManager : Singleton<GameManager>
     {
         DontDestroyOnLoad(this);
         ResetPos();
+       // Player = Get 
     }
     public void ResetPos()
     {
@@ -28,7 +28,7 @@ public class GameManager : Singleton<GameManager>
     }
     public void Play()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadSceneAsync(1);
         ResetPos();
         PlayerData.Instance.SetValues();
     }
@@ -38,6 +38,6 @@ public class GameManager : Singleton<GameManager>
     }
     public void Return()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadSceneAsync(0);
     }
 }
