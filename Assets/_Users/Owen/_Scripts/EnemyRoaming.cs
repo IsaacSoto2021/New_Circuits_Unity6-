@@ -11,9 +11,9 @@ public class RandomMovement : MonoBehaviour
     public float _chaseRange = 15; //radius of chase
 
     public Transform _centrePoint; //centre of the area the agent wants to move around in
-    private Transform _player;
+    private Transform _player; //what enemy chases
 
-    public GameObject _playerObj;
+    public GameObject _playerRef; //player ref to set _player to
 
     public bool _playerInSight;
     bool _roaming = false;
@@ -28,8 +28,8 @@ public class RandomMovement : MonoBehaviour
     {
         _roaming = true;
         _chasing = false;
-        _playerObj = GameObject.FindWithTag("Player");
-        _player = _playerObj.transform;
+        _playerRef = GameObject.FindWithTag("Player");
+        _player = _playerRef.transform;
     }
 
     void Update()
@@ -55,7 +55,7 @@ public class RandomMovement : MonoBehaviour
     }
     private void ChasePlayer()
     {
-        _player = _playerObj.transform;
+        _player = _playerRef.transform;
         agent.SetDestination(_player.position);
     }
     bool RandomPoint(Vector3 center, float _range, out Vector3 result)

@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : Singleton<GameManager>
 {
     public NavMeshAgent Player;
+    private GameObject _playerRef;
 
     [SerializeField] Vector3 _spawnPoint;
 
@@ -14,7 +15,11 @@ public class GameManager : Singleton<GameManager>
     {
         DontDestroyOnLoad(this);
         ResetPos();
-       // Player = Get 
+        if (Player != null)
+        {
+            _playerRef = GameObject.FindWithTag("Player");
+            Player = _playerRef.GetComponent<NavMeshAgent>();
+        }
     }
     public void ResetPos()
     {
@@ -29,6 +34,8 @@ public class GameManager : Singleton<GameManager>
     public void Play()
     {
         SceneManager.LoadSceneAsync(1);
+        _playerRef = GameObject.FindWithTag("Player");
+        Player = _playerRef.GetComponent<NavMeshAgent>();
         ResetPos();
         PlayerData.Instance.SetValues();
     }

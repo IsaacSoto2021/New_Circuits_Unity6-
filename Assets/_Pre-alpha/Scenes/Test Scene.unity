@@ -1020,6 +1020,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5529140082872110808}
+  - component: {fileID: 5529140082872110809}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Untagged
@@ -7223,7 +7224,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 5529140082872110808}
     m_Modifications:
     - target: {fileID: 4364348366573912257, guid: b3b0883c65abdc94a9d7e55a7cb9e525, type: 3}
       propertyPath: m_Camera
@@ -12618,8 +12619,21 @@ Transform:
   m_Children:
   - {fileID: 8149658249639915523}
   - {fileID: 3427681867179835255}
+  - {fileID: 8782589307971491845}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5529140082872110809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59692889909015795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0424922e1cb6a0e478be646c278d4128, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
 --- !u!64 &5531473505889427669
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -19801,6 +19815,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6834247184735573433, guid: b3b0883c65abdc94a9d7e55a7cb9e525, type: 3}
   m_PrefabInstance: {fileID: 2990456365073689751}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &8782589307971491845 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4695307526876149943, guid: b3b0883c65abdc94a9d7e55a7cb9e525, type: 3}
+  m_PrefabInstance: {fileID: 2990456365073689751}
+  m_PrefabAsset: {fileID: 0}
 --- !u!33 &8793223008176958241
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20777,7 +20796,6 @@ SceneRoots:
   - {fileID: 6178266}
   - {fileID: 888908248}
   - {fileID: 6548049804086687078}
-  - {fileID: 2990456365073689751}
   - {fileID: 8816737403352225192}
   - {fileID: 1901994722}
   - {fileID: 608624315}
