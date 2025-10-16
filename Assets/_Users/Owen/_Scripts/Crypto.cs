@@ -7,7 +7,9 @@ public class Crypto : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            PlayerData.Instance._scrapToAdd += Random.Range(4, 12);
+            int _value = Random.Range(4, 12);
+            PlayerData.Instance._scrapToAdd += _value;
+            Debug.Log("Crypto picked up: " + _value);
             Destroy(gameObject);
         }
     }
