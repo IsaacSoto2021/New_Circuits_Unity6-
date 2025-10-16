@@ -10,7 +10,7 @@ public class PlayerData : Singleton<PlayerData>
     public int _Hp = 0;
     public int _hpTier = 1;
     public int _scrap;
-    public int _damage = 50;
+    public int _damage = 25;
     public float _moveSpeed = 3.0f;
     public int _scrapToAdd = 0;
 
@@ -26,19 +26,6 @@ public class PlayerData : Singleton<PlayerData>
     {
         DontDestroyOnLoad(this);
         SetValues();
-    }
-
-    private void OnTriggerEnter(Collider collision)
-    {
-        if (collision.CompareTag("EnemyProjectile20"))
-        {
-            _Hp -= 20;
-            if (_Hp <= 0)
-            {
-                SceneManager.LoadScene(0);
-                LoseTempScrap();
-            }
-        }
     }
 
     public void LoseTempScrap()

@@ -13,6 +13,7 @@ public class PauseMenu : MonoBehaviour
 
     private void Start()
     {
+        _touchCanvas = DonDestroy.Instance.gameObject;
         Pause();
     }
 
@@ -40,7 +41,7 @@ public class PauseMenu : MonoBehaviour
     public void ConfirmAbandon()
     {
         PlayerData.Instance.LoseTempScrap();
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     public void Return()

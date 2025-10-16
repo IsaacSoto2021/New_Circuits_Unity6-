@@ -7,7 +7,7 @@ public class EnemyProjectile : MonoBehaviour
 {
     public float lifetime = 5f;
 
-    public int damage = 20;
+    public int damage = 10;
     void Start()
     {
         Destroy(gameObject, lifetime);
@@ -24,9 +24,10 @@ public class EnemyProjectile : MonoBehaviour
             PlayerData.Instance._Hp -= damage;
             if (PlayerData.Instance._Hp <= 0)
             {
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(1);
                 PlayerData.Instance.LoseTempScrap();
             }
+            Destroy(gameObject);
         }
         else
         {

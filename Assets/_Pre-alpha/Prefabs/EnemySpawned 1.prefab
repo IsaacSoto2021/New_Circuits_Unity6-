@@ -177,7 +177,7 @@ MonoBehaviour:
   _distance: 0
   _chaseRange: 6
   _centrePoint: {fileID: 1495519478686671413, guid: 41148215868021b4fa92989b98e9cd80, type: 3}
-  _player: {fileID: 5529140082228819758, guid: 44502063036b4984f8833f7ecc3935ce, type: 3}
+  _playerRef: {fileID: 0}
   _playerInSight: 0
 --- !u!114 &8945563684731136280
 MonoBehaviour:
@@ -239,7 +239,7 @@ Transform:
   m_GameObject: {fileID: 5033133960260774241}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
