@@ -1,15 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
-public class Scrap : MonoBehaviour
+public class Crypto : MonoBehaviour
 {
-    [SerializeField] int _value;
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.CompareTag("Player"))
         {
-            PlayerData.Instance._scrapToAdd += _value;
+            PlayerData.Instance._scrapToAdd += Random.Range(4, 12);
             Destroy(gameObject);
         }
     }
