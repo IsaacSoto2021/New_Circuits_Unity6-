@@ -21,7 +21,7 @@ public class GameManager : Singleton<GameManager>
         }
         DontDestroyOnLoad(this);
         ResetPos();
-        SceneManager.LoadSceneAsync(1);
+        //SceneManager.LoadSceneAsync(1);
     }
     public void ResetPos()
     {

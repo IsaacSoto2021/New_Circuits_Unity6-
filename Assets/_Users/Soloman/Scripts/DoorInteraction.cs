@@ -22,9 +22,9 @@ public class DoorInteraction : MonoBehaviour
     public List<int> correctSequence = new List<int>();
     private List<int> playerInput = new List<int>();
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider collision)
     {
-        if (other.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
             playerInside = true;
 
@@ -132,7 +132,7 @@ public class DoorInteraction : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 }
 
