@@ -43,6 +43,8 @@ GameObject:
   - component: {fileID: 893070582719731887}
   - component: {fileID: 5102298491127364532}
   - component: {fileID: 7490035477090682596}
+  - component: {fileID: 2503529033447511248}
+  - component: {fileID: 5949114304576485608}
   m_Layer: 0
   m_Name: Item_Machine
   m_TagString: Untagged
@@ -121,3 +123,38 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2503529033447511248
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7270785693710589458}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1888407500807227087, guid: 2f76d88537ee0084e8b0318aa968545e, type: 3}
+--- !u!114 &5949114304576485608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7270785693710589458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c5e4477f1d1b9a4ab1839d46d6cc514, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scrap
+  _value: 5
