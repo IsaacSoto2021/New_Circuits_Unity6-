@@ -10,6 +10,9 @@ TagManager:
   - SpawnPoint
   - Floors
   - Walls
+  - Blue
+  - Green
+  - Red
   layers:
   - Default
   - TransparentFX
