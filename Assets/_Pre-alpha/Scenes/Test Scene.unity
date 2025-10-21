@@ -738,87 +738,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 879327722240774040, guid: b3b0883c65abdc94a9d7e55a7cb9e525, type: 3}
   m_PrefabInstance: {fileID: 2990456365073689751}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1340929256
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2462599004198581918, guid: 766e8c89902970f468644ce2e76d63d1, type: 3}
-      propertyPath: hasLock
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2462599004198581918, guid: 766e8c89902970f468644ce2e76d63d1, type: 3}
-      propertyPath: buttonOne
-      value: 
-      objectReference: {fileID: 165843722}
-    - target: {fileID: 2462599004198581918, guid: 766e8c89902970f468644ce2e76d63d1, type: 3}
-      propertyPath: buttonTwo
-      value: 
-      objectReference: {fileID: 362421926}
-    - target: {fileID: 2462599004198581918, guid: 766e8c89902970f468644ce2e76d63d1, type: 3}
-      propertyPath: buttonFour
-      value: 
-      objectReference: {fileID: 944279369}
-    - target: {fileID: 2462599004198581918, guid: 766e8c89902970f468644ce2e76d63d1, type: 3}
-      propertyPath: buttonThree
-      value: 
-      objectReference: {fileID: 860214457}
-    - target: {fileID: 2462599004198581918, guid: 766e8c89902970f468644ce2e76d63d1, type: 3}
-      propertyPath: codeDisplay
-      value: 
-      objectReference: {fileID: 1070802242}
-    - target: {fileID: 7474813763528970331, guid: 766e8c89902970f468644ce2e76d63d1, type: 3}
-      propertyPath: m_Name
-      value: Door
-      objectReference: {fileID: 0}
-    - target: {fileID: 8856099361145826146, guid: 766e8c89902970f468644ce2e76d63d1, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.6185431
-      objectReference: {fileID: 0}
-    - target: {fileID: 8856099361145826146, guid: 766e8c89902970f468644ce2e76d63d1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.2420893
-      objectReference: {fileID: 0}
-    - target: {fileID: 8856099361145826146, guid: 766e8c89902970f468644ce2e76d63d1, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5.6767817
-      objectReference: {fileID: 0}
-    - target: {fileID: 8856099361145826146, guid: 766e8c89902970f468644ce2e76d63d1, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8856099361145826146, guid: 766e8c89902970f468644ce2e76d63d1, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8856099361145826146, guid: 766e8c89902970f468644ce2e76d63d1, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8856099361145826146, guid: 766e8c89902970f468644ce2e76d63d1, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8856099361145826146, guid: 766e8c89902970f468644ce2e76d63d1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8856099361145826146, guid: 766e8c89902970f468644ce2e76d63d1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8856099361145826146, guid: 766e8c89902970f468644ce2e76d63d1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 766e8c89902970f468644ce2e76d63d1, type: 3}
 --- !u!1001 &1901994722
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11552,7 +11471,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6d5d7e6cbb8886d4bab937c4d08aac60, type: 2}
+  - {fileID: 2100000, guid: cfb1135fddaa07246b4838d8492dd6e4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20933,4 +20852,3 @@ SceneRoots:
   - {fileID: 356264763}
   - {fileID: 2567286898299372646}
   - {fileID: 6011310807068867090}
-  - {fileID: 1340929256}
