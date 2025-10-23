@@ -16,7 +16,11 @@ public class DoorInteraction : MonoBehaviour
     public GameObject buttonTwo;
     public GameObject buttonThree;
     public GameObject buttonFour;
+
     public GameObject codeDisplay;
+
+    public GameObject buttonUnlockedDoor;
+    public GameObject buttonLockedDoor;
 
     // sequence tracking
     public List<int> correctSequence = new List<int>();
@@ -30,31 +34,28 @@ public class DoorInteraction : MonoBehaviour
 
             if (hasLock)
             {
-                // Generate a new random sequence (1–4)
-                correctSequence = GenerateRandomSequence();
-
-                // Display buttons and code UI
-                buttonOne.SetActive(true);
-                buttonTwo.SetActive(true);
-                buttonThree.SetActive(true);
-                buttonFour.SetActive(true);
-
-                codeDisplay.SetActive(true);
-
-                // Flash the sequence to player
-                StartCoroutine(ShowSequence());
+                buttonLockedDoor.SetActive(true);
             }
             else if (hasKeycardLock)
             {
                 PlayerData.Instance._hasKeycard = false;
-                UnlockDoor();
+                buttonUnlockedDoor.SetActive(true);
             }
             else
             {
-                // Unlock instantly if no lock
-                UnlockDoor();
+                buttonUnlockedDoor.SetActive(true);
             }
         }
+    }
+
+    public void OpenDoor()
+    {
+        buttonUnlockedDoor.SetActive(false);
+        buttonLockedDoor.SetActive(false);
+
+        GetComponent<Collider>().enabled = false;
+        targetGameObject.GetComponent<MeshRenderer>().enabled = false;
+        targetGameObject.GetComponent<Collider>().enabled = false;
     }
 
     void OnTriggerExit(Collider other)
@@ -62,9 +63,20 @@ public class DoorInteraction : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInside = false;
+
+            // Hide buttons and code UI
+            buttonOne.SetActive(false);
+            buttonTwo.SetActive(false);
+            buttonThree.SetActive(false);
+            buttonFour.SetActive(false);
+
+            codeDisplay.SetActive(false);
+
+            buttonUnlockedDoor.SetActive(false);
+            buttonLockedDoor.SetActive(false);
         }
     }
-
+   
     public void RegisterInput(int buttonNumber)
     {
         if (!playerInside || !hasLock)
@@ -85,7 +97,7 @@ public class DoorInteraction : MonoBehaviour
         // If the whole sequence is correct
         if (playerInput.Count == correctSequence.Count)
         {
-            UnlockDoor();
+            OpenDoor();
             playerInput.Clear();
         }
     }
@@ -118,12 +130,25 @@ public class DoorInteraction : MonoBehaviour
         }
     }
 
-    private void UnlockDoor()
+    public void UnlockDoor()
     {
-        GetComponent<Collider>().enabled = false;
-        targetGameObject.GetComponent<MeshRenderer>().enabled = false;
-        targetGameObject.GetComponent<Collider>().enabled = false;
-    }
+        buttonUnlockedDoor.SetActive(false);
+        buttonLockedDoor.SetActive(false);
+
+        // Generate a new random sequence (1–4)
+        correctSequence = GenerateRandomSequence();
+
+        // Display buttons and code UI
+        buttonOne.SetActive(true);
+        buttonTwo.SetActive(true);
+        buttonThree.SetActive(true);
+        buttonFour.SetActive(true);
+
+        codeDisplay.SetActive(true);
+
+        // Flash the sequence to player
+        StartCoroutine(ShowSequence());
+    } 
 
     void Start()
     {
