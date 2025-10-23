@@ -9,10 +9,16 @@ public class PlayerData : Singleton<PlayerData>
     public int _maxHp = 100;
     public int _Hp = 0;
     public int _hpTier = 1;
-    public int _scrap;
     public int _damage = 25;
     public float _moveSpeed = 3.0f;
-    public int _scrapToAdd = 0;
+
+    public int _scrap;
+    public int _crypto;
+    public int _electronics;
+
+    public int _scrapToAdd;
+    public int _cryptoToAdd;
+    public int _electronicsToAdd;
 
     public bool _hasKeycard;
 
