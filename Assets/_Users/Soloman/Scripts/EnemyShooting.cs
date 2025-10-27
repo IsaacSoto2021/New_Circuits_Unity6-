@@ -8,6 +8,8 @@ public class EnemyShooting : MonoBehaviour
     public Transform firePoint;
     public float shootRange = 10f;
     public float fireRate = 1f;
+    [SerializeField] float projectileSpeed = 8f;
+
 
     private float fireCooldown = 0f;
     private Transform player;
@@ -48,7 +50,6 @@ public class EnemyShooting : MonoBehaviour
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
         if (rb != null)
         {
-            float projectileSpeed = 20f;
             rb.linearVelocity = direction * projectileSpeed;
         }
     }
