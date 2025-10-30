@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Corners_and_Small_Floors
-    second: {fileID: 2100000, guid: 6d5d7e6cbb8886d4bab937c4d08aac60, type: 2}
+    second: {fileID: 2100000, guid: 897c2fbe74ca0d6419662c8a20ffdc00, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -18,12 +18,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Long_wall_And_Big_Floor
-    second: {fileID: 2100000, guid: 6d5d7e6cbb8886d4bab937c4d08aac60, type: 2}
+    second: {fileID: 2100000, guid: 84d94d1ce9e5b5e4f8794ee294f23b8d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Small_Wall_And_Doorways
-    second: {fileID: 2100000, guid: 6d5d7e6cbb8886d4bab937c4d08aac60, type: 2}
+    second: {fileID: 2100000, guid: cfb1135fddaa07246b4838d8492dd6e4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
