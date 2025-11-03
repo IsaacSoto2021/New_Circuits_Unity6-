@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 51837987}
   - component: {fileID: 51837986}
   - component: {fileID: 51837985}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Upgrades_Buttons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 51837986}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 150880039}
+        m_TargetAssemblyTypeName: MainMenuUIManager, Assembly-CSharp
+        m_MethodName: OnUpgradesButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &51837986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,6 +264,7 @@ GameObject:
   - component: {fileID: 150880037}
   - component: {fileID: 150880036}
   - component: {fileID: 150880035}
+  - component: {fileID: 150880039}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -339,12 +352,12 @@ RectTransform:
   - {fileID: 1171124377}
   - {fileID: 1340860646}
   - {fileID: 1553926050}
-  - {fileID: 1225793640}
   - {fileID: 1613487344}
-  - {fileID: 51837984}
   - {fileID: 486383499}
   - {fileID: 1253022289}
   - {fileID: 983271203}
+  - {fileID: 1225793640}
+  - {fileID: 51837984}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -352,6 +365,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &150880039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150880034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 710db277260c6b94a99fff167b297aae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MainMenuUIManager
+  cryptoText: {fileID: 1702035062}
+  playButton: {fileID: 1225793641}
+  upgradesButton: {fileID: 51837985}
 --- !u!1 &192701359
 GameObject:
   m_ObjectHideFlags: 0
@@ -1341,7 +1369,7 @@ GameObject:
   - component: {fileID: 1225793643}
   - component: {fileID: 1225793642}
   - component: {fileID: 1225793641}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Play_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1411,7 +1439,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1225793642}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 150880039}
+        m_TargetAssemblyTypeName: MainMenuUIManager, Assembly-CSharp
+        m_MethodName: OnPlayButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1225793642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1494,7 +1534,7 @@ GameObject:
   - component: {fileID: 1307438606}
   - component: {fileID: 1307438608}
   - component: {fileID: 1307438607}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Upgrades_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1707,7 +1747,7 @@ GameObject:
   - component: {fileID: 1412286768}
   - component: {fileID: 1412286770}
   - component: {fileID: 1412286769}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Play-Button-Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}

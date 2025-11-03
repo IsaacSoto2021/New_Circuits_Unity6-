@@ -99,6 +99,14 @@ public class DoorInteraction : MonoBehaviour
         {
             OpenDoor();
             playerInput.Clear();
+
+            // Hide buttons and code UI
+            buttonOne.SetActive(false);
+            buttonTwo.SetActive(false);
+            buttonThree.SetActive(false);
+            buttonFour.SetActive(false);
+
+            codeDisplay.SetActive(false);
         }
     }
 

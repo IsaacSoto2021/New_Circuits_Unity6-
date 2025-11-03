@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,21 +13,23 @@ public class SkillTree : MonoBehaviour
 
     void Start()
     {
-        // Create skills
-        Skill root = new Skill("Root Skill");
-        Skill tier1 = new Skill("Tier 1 Skill");
-        Skill tier2 = new Skill("Tier 2 Skill");
+        // Create skills with actual currency costs
+        Skill root = new Skill("Root Skill", scrap: 50, electronics: 25, crypto: 10);
+        Skill tier1 = new Skill("Tier 1 Skill", scrap: 150, electronics: 50, crypto: 25);
+        Skill tier2 = new Skill("Tier 2 Skill", scrap: 300, electronics: 100, crypto: 50);
 
-        // Assign buttons
+        // Assign UI buttons
         root.skillButton = rootButton;
         tier1.skillButton = tier1Button;
         tier2.skillButton = tier2Button;
 
         // Set prerequisites
+        // Tier 1 requires Root
         tier1.prerequisites.Add(root);
+        // Tier 2 requires Tier 1
         tier2.prerequisites.Add(tier1);
 
-        // Add to list
+        // Add all to list (optional for future expansion)
         allSkills.Add(root);
         allSkills.Add(tier1);
         allSkills.Add(tier2);
@@ -37,9 +39,9 @@ public class SkillTree : MonoBehaviour
         tier1Button.onClick.AddListener(() => tier1.Unlock());
         tier2Button.onClick.AddListener(() => tier2.Unlock());
 
-        // Initially, only the root button is interactable
+        // All buttons start interactable (checks happen inside Unlock)
         rootButton.interactable = true;
-        tier1Button.interactable = true;  // player can click, but unlock will fail until root is done
-        tier2Button.interactable = true;  // same here
+        tier1Button.interactable = true;
+        tier2Button.interactable = true;
     }
 }
