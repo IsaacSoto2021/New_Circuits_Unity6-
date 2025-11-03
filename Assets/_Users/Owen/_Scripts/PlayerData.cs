@@ -30,7 +30,6 @@ public class PlayerData : Singleton<PlayerData>
 
     private void Start()
     {
-        DontDestroyOnLoad(this);
         SetValues();
     }
 

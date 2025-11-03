@@ -45,9 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 430134da9e5d33941acf62db1537adac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
-  _playerControllerPrefab: {fileID: 59692888133242117, guid: 44502063036b4984f8833f7ecc3935ce, type: 3}
-  _spawnPoint: {x: 3.7, y: 1.53, z: 1.88}
+  Player: {fileID: 7553875999705753665, guid: db99381695efa514d8cbc2f09b7285c2, type: 3}
+  _spawnPoint: {x: -1.02, y: 1.29, z: 10.07}
 --- !u!114 &2686249232162998596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,8 +62,12 @@ MonoBehaviour:
   _maxHp: 100
   _Hp: 0
   _hpTier: 1
-  _scrap: 0
   _damage: 50
   _moveSpeed: 3
+  _scrap: 0
+  _crypto: 0
+  _electronics: 0
   _scrapToAdd: 0
+  _cryptoToAdd: 0
+  _electronicsToAdd: 0
   _hasKeycard: 0
