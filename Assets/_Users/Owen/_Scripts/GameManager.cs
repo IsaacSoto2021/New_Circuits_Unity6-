@@ -35,7 +35,7 @@ public class GameManager : Singleton<GameManager>
     }
     public void Play()
     {
-        SceneManager.LoadSceneAsync(0);
+        SceneManager.LoadSceneAsync(3);
         _playerRef = GameObject.FindWithTag("Player");
         Player = _playerRef.GetComponent<NavMeshAgent>();
         ResetPos();
@@ -48,5 +48,10 @@ public class GameManager : Singleton<GameManager>
     public void Return()
     {
         SceneManager.LoadSceneAsync(1);
+    }
+
+    public void GameScene()
+    {
+        SceneManager.LoadSceneAsync(0);
     }
 }

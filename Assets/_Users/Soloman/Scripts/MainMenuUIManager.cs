@@ -36,13 +36,13 @@ public class MainMenuUIManager : MonoBehaviour
 
     public void OnPlayButtonPressed()
     {
-        SceneManager.LoadScene("Level_1");
+        GameManager.Instance.Play();
         Debug.LogError("failed");
     }
 
     public void OnUpgradesButtonPressed()
     {
-        SceneManager.LoadScene("SkillTree");
+        GameManager.Instance.GameScene();
         Debug.LogError("failed");
     }
 }

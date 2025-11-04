@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 51837987}
   - component: {fileID: 51837986}
   - component: {fileID: 51837985}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Upgrades_Buttons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1369,7 +1369,7 @@ GameObject:
   - component: {fileID: 1225793643}
   - component: {fileID: 1225793642}
   - component: {fileID: 1225793641}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Play_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1534,7 +1534,7 @@ GameObject:
   - component: {fileID: 1307438606}
   - component: {fileID: 1307438608}
   - component: {fileID: 1307438607}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Upgrades_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1747,7 +1747,7 @@ GameObject:
   - component: {fileID: 1412286768}
   - component: {fileID: 1412286770}
   - component: {fileID: 1412286769}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Play-Button-Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
