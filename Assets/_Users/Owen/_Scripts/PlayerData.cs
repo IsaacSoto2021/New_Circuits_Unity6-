@@ -8,7 +8,6 @@ public class PlayerData : Singleton<PlayerData>
 {
     public int _maxHp = 100;
     public int _Hp = 0;
-    public int _hpTier = 1;
     public int _damage = 25;
     public float _moveSpeed = 3.0f;
 

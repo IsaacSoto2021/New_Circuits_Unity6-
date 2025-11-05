@@ -22,7 +22,6 @@ public class Spawner : MonoBehaviour
         _enemy2.SetActive(true);
         _enemy3.SetActive(true);
         _enemy4.SetActive(true);
-        Debug.Log("greg");
     }
 
 }

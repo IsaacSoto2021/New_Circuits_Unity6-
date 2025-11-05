@@ -5,18 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/_Alpha/Test Scene.unity
-    guid: 98ff077dfa3ddde4fb2e4cff441987c5
   - enabled: 1
     path: Assets/_Beta_Build/Scenes/Level_1.unity
     guid: 193086584cac6074aa7a52c2b82d9f96
   - enabled: 1
-    path: Assets/_Pre-alpha/Scenes/MainMenu.unity
-    guid: 9c68d70a5374cab4ab0179e9cccb1679
+    path: Assets/_Beta_Build/Scenes/Main_Menu.unity
+    guid: de9a060bdf7f4cc43804d5ec0234bd76
   - enabled: 1
-    path: Assets/_Pre-alpha/Scenes/SkillTree.unity
-    guid: 7af3132af95b2ed4490112ee2375b25a
+    path: Assets/_Beta_Build/Scenes/Skill_Tree.unity
+    guid: eb1be5a2b4ac39045a8ffc74f2166877
   - enabled: 1
     path: Assets/_Beta_Build/Scenes/Game_Scene.unity
     guid: 6f289750a7ad1324593a42a26b8770d0

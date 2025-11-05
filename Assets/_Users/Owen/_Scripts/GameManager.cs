@@ -20,7 +20,7 @@ public class GameManager : Singleton<GameManager>
             Player = _playerRef.GetComponent<NavMeshAgent>();
         }
         DontDestroyOnLoad(this);
-        ResetPos();
+        // ResetPos();
         //SceneManager.LoadSceneAsync(1);
     }
     public void ResetPos()
@@ -36,10 +36,6 @@ public class GameManager : Singleton<GameManager>
     public void Play()
     {
         SceneManager.LoadSceneAsync(3);
-        _playerRef = GameObject.FindWithTag("Player");
-        Player = _playerRef.GetComponent<NavMeshAgent>();
-        ResetPos();
-        PlayerData.Instance.SetValues();
     }
     public void SkillTree()
     {
@@ -49,9 +45,17 @@ public class GameManager : Singleton<GameManager>
     {
         SceneManager.LoadSceneAsync(1);
     }
+    public void ReturnFromSkillTree()
+    {
+        SceneManager.LoadSceneAsync(3);
+    }
 
     public void GameScene()
     {
         SceneManager.LoadSceneAsync(0);
+        //_playerRef = GameObject.FindWithTag("Player");
+        //Player = _playerRef.GetComponent<NavMeshAgent>();
+        //ResetPos();
+        PlayerData.Instance.SetValues();
     }
 }
