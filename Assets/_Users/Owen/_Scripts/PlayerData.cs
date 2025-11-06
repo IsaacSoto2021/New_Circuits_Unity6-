@@ -21,6 +21,13 @@ public class PlayerData : Singleton<PlayerData>
 
     public bool _hasKeycard;
 
+    private void Update()
+    {
+        if (_Hp > _maxHp)
+        {
+            _Hp = _maxHp;
+        }
+    }
     public void SetValues()
     {
         _Hp = _maxHp;
