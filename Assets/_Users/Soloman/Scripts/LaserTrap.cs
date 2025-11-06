@@ -4,9 +4,9 @@ using UnityEngine;
 public class LaserTrap : MonoBehaviour
 {
     [Header("Laser Settings")]
-    public GameObject laserObject; // The child laser beam
-    public int damageAmount = 10;
-    public float toggleInterval = 2f; // seconds
+    public GameObject laserObject;     // The child laser visual + trigger collider
+    public float toggleInterval = 2f;  // Seconds between on/off
+    public int damageAmount = 10;      // Damage dealt to player
 
     private bool laserActive = false;
 
@@ -18,7 +18,15 @@ public class LaserTrap : MonoBehaviour
             return;
         }
 
-        // Start the on/off cycle
+        // Ensure child collider forwards trigger events to this parent
+        LaserChildTrigger trigger = laserObject.GetComponent<LaserChildTrigger>();
+        if (trigger == null)
+        {
+            trigger = laserObject.AddComponent<LaserChildTrigger>();
+        }
+        trigger.parentTrap = this;
+
+        // Start toggling the laser on/off
         StartCoroutine(ToggleLaser());
     }
 
@@ -32,36 +40,30 @@ public class LaserTrap : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    // Called by the child trigger when something enters
+    public void HandleTriggerEnter(Collider other)
     {
         if (!laserActive) return;
 
-        // Check if we hit the player
         if (other.CompareTag("Player"))
         {
-            // Apply damage
             PlayerData.Instance._Hp -= damageAmount;
-
-            // Prevent HP from dropping below 0
             PlayerData.Instance._Hp = Mathf.Max(PlayerData.Instance._Hp, 0);
-
-            Debug.Log($"Laser hit player! HP: {PlayerData.Instance._Hp}");
-
-            // cooldown so it doesn't damage every frame
-            StartCoroutine(DamageCooldown(other));
+            Debug.Log($"Laser hit player! -{damageAmount} HP | Current HP: {PlayerData.Instance._Hp}");
         }
     }
+}
 
-    private IEnumerator DamageCooldown(Collider player)
+// forwards trigger events to the parent LaserTrap
+public class LaserChildTrigger : MonoBehaviour
+{
+    [HideInInspector] public LaserTrap parentTrap;
+
+    private void OnTriggerEnter(Collider other)
     {
-        // Disable collider temporarily to prevent instant re-hit
-        Collider col = GetComponentInChildren<Collider>();
-        if (col != null)
-            col.enabled = false;
-
-        yield return new WaitForSeconds(0.5f); // half-second delay before next hit
-
-        if (col != null)
-            col.enabled = true;
+        if (parentTrap != null)
+        {
+            parentTrap.HandleTriggerEnter(other);
+        }
     }
 }
