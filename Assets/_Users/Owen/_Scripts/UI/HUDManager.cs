@@ -9,7 +9,9 @@ public class HUDManager : MonoBehaviour
 
     public TMP_Text _HpText;
     public TMP_Text _ScrapText;
-    public TMP_Text _InventoryText;
+    public TMP_Text _iScrapText;
+    public TMP_Text _iCryptoText;
+    public TMP_Text _iElectronicsText;
     public GameObject _Inventory;
 
     private bool _isInventoryOpen;
@@ -19,11 +21,15 @@ public class HUDManager : MonoBehaviour
     {
         int _Hp = PlayerData.Instance._Hp;
         int _Scrap = PlayerData.Instance._scrap + PlayerData.Instance._scrapToAdd;
+        int _Crypto = PlayerData.Instance._scrap + PlayerData.Instance._scrapToAdd;
+        int _Electronics = PlayerData.Instance._scrap + PlayerData.Instance._scrapToAdd;
 
-        _HpText.SetText("" + _Hp);
-        _ScrapText.SetText("" + _Scrap);
+        _HpText.SetText("" + _Hp);//hud icon text
+        _ScrapText.SetText("" + _Scrap);//same
 
-        _InventoryText.SetText("Scrap: " + PlayerData.Instance._scrapToAdd + "\nCrypto: " + PlayerData.Instance._cryptoToAdd + "\nElectronics: " + PlayerData.Instance._electronicsToAdd);
+        _iScrapText.SetText("Scrap: " + _Scrap);
+        _iCryptoText.SetText("Crypto: " + _Crypto);
+        _iElectronicsText.SetText("Electronics: " + _Electronics);
     }
 
     private void Start()

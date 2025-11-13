@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 6572898283895087873}
   m_Layer: 0
   m_Name: PlayerController 1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -189,6 +189,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 328018361254508147, guid: db99381695efa514d8cbc2f09b7285c2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.4999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 328018361254508147, guid: db99381695efa514d8cbc2f09b7285c2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 328018361254508147, guid: db99381695efa514d8cbc2f09b7285c2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.4999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 328018361254508147, guid: db99381695efa514d8cbc2f09b7285c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.56
       objectReference: {fileID: 0}
@@ -232,6 +244,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7553875999705753665, guid: db99381695efa514d8cbc2f09b7285c2, type: 3}
+      propertyPath: m_Speed
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -260,7 +276,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6916607510730384083, guid: 8b6b63ea45d37134d8b22ff0ab7faa6e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.209999
+      value: 9.210001
       objectReference: {fileID: 0}
     - target: {fileID: 6916607510730384083, guid: 8b6b63ea45d37134d8b22ff0ab7faa6e, type: 3}
       propertyPath: m_LocalPosition.z

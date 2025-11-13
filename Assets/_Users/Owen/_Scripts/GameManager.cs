@@ -21,7 +21,6 @@ public class GameManager : Singleton<GameManager>
         }
         DontDestroyOnLoad(this);
         // ResetPos();
-        //SceneManager.LoadSceneAsync(1);
     }
     public void ResetPos()
     {
@@ -43,7 +42,7 @@ public class GameManager : Singleton<GameManager>
     }
     public void Return()
     {
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(0);
     }
     public void ReturnFromSkillTree()
     {
@@ -52,7 +51,7 @@ public class GameManager : Singleton<GameManager>
 
     public void GameScene()
     {
-        SceneManager.LoadSceneAsync(0);
+        SceneManager.LoadSceneAsync(1);
         //_playerRef = GameObject.FindWithTag("Player");
         //Player = _playerRef.GetComponent<NavMeshAgent>();
         //ResetPos();

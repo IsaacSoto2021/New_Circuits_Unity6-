@@ -30,7 +30,7 @@ public class EnemyHPSystem : MonoBehaviour
 
         for (int i = 0; i < times; i++)
         {
-            PlayerData.Instance._scrapToAdd++;
+            PlayerData.Instance._scrapToAdd++;//replace loot type
         }
     }
 }

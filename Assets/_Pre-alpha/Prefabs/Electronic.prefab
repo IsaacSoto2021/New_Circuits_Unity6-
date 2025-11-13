@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1795948894240878278}
   - component: {fileID: 1736755428312306601}
   - component: {fileID: 5021018903539430906}
-  - component: {fileID: 5917856938963547774}
+  - component: {fileID: 7889226876515800031}
   m_Layer: 0
   m_Name: Electronic
   m_TagString: Untagged
@@ -112,7 +112,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.2, y: 1.2, z: 1.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5917856938963547774
+--- !u!114 &7889226876515800031
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4373650843941005205}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c5e4477f1d1b9a4ab1839d46d6cc514, type: 3}
+  m_Script: {fileID: 11500000, guid: 837c1c64198cc834c90121387725f50e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Scrap
-  _value: 1
+  m_EditorClassIdentifier: Assembly-CSharp::Electronics
+  _value: 5

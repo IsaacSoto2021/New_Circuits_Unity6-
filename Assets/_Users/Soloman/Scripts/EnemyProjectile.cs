@@ -19,13 +19,13 @@ public class EnemyProjectile : MonoBehaviour
         {
             return;
         }
-        else if (collision.CompareTag("Player"))
+        else if (collision.CompareTag("Player")) 
         {
             PlayerData.Instance._Hp -= damage;
-            if (PlayerData.Instance._Hp <= 0)
+            if (PlayerData.Instance._Hp <= 0)//Player death handled here
             {
-                SceneManager.LoadScene(1);
-                PlayerData.Instance.LoseTempScrap();
+                SceneManager.LoadScene(0);
+                PlayerData.Instance.LoseTempResources();
             }
             Destroy(gameObject);
         }

@@ -7,7 +7,7 @@ public class GameSceneManager : MonoBehaviour
 {
     public void ClickStartRun()
     {
-        PlayerData.Instance.LoseTempScrap();
+        PlayerData.Instance.LoseTempResources();
         GameManager.Instance.GameScene();
     }
     public void ClickSkillTree()

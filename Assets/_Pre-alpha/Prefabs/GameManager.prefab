@@ -61,7 +61,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerData
   _maxHp: 100
   _Hp: 0
-  _hpTier: 1
   _damage: 50
   _moveSpeed: 3
   _scrap: 0

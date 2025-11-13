@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ExtractionZone : MonoBehaviour
 {
-    public float requiredTimeInZone = 5f;
+    public float requiredTimeInZone;
 
     private float timer = 0f;
     private bool playerInside = false;
@@ -37,7 +37,7 @@ public class ExtractionZone : MonoBehaviour
             if (timer >= requiredTimeInZone)
             {
                 Debug.Log("Player extracted!");
-                PlayerData.Instance.GainTempScrap();
+                PlayerData.Instance.GainTempResources();
                 SceneManager.LoadScene(0);
             }
         }

@@ -39,15 +39,25 @@ public class PlayerData : Singleton<PlayerData>
         SetValues();
     }
 
-    public void LoseTempScrap()
+    public void LoseTempResources()
     {
         _scrapToAdd = 0;
+        _electronicsToAdd = 0;
+        _cryptoToAdd = 0;
     }
 
-    public void GainTempScrap()
+    public void GainTempResources()
     {
         _scrap += _scrapToAdd;
-        Debug.Log(_scrap);
         _scrapToAdd = 0;
+        _crypto += _cryptoToAdd;
+        _cryptoToAdd = 0;
+        _electronics += _electronicsToAdd;
+        _electronicsToAdd = 0;
+        Debug.Log("Scrap: " + _scrap);
+        Debug.Log("Electronics: " + _electronics);
+        Debug.Log("Crypto: " + _crypto);
+
     }
+
 }

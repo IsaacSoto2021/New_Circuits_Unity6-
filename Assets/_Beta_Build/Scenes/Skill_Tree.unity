@@ -367,6 +367,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c3e6e30e7ee0ca49b005595ecf628ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillTreeManager
+  _ScrapCounter: {fileID: 576986445}
+  _CryptoCounter: {fileID: 1922280252}
+  _ElectronicsCounter: {fileID: 1688758580}
 --- !u!4 &134973172
 Transform:
   m_ObjectHideFlags: 0
@@ -1160,7 +1163,7 @@ GameObject:
   - component: {fileID: 451159312}
   - component: {fileID: 451159311}
   m_Layer: 5
-  m_Name: Money-Icon
+  m_Name: Crypto-Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1402,7 +1405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 493183461}
   m_Layer: 0
-  m_Name: Money
+  m_Name: Crypto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2576,10 +2579,10 @@ RectTransform:
   m_Children:
   - {fileID: 1878546103}
   - {fileID: 488302107}
-  - {fileID: 493183461}
   - {fileID: 2109194403}
-  - {fileID: 96177025}
   - {fileID: 417918239}
+  - {fileID: 493183461}
+  - {fileID: 96177025}
   - {fileID: 1701609389}
   - {fileID: 1064496840}
   m_Father: {fileID: 0}
@@ -5492,7 +5495,7 @@ GameObject:
   - component: {fileID: 1922280253}
   - component: {fileID: 1922280252}
   m_Layer: 5
-  m_Name: Money-Counter
+  m_Name: Crypto-Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5994,7 +5997,7 @@ GameObject:
   - component: {fileID: 2043508319}
   - component: {fileID: 2043508318}
   m_Layer: 5
-  m_Name: Money-Text
+  m_Name: Crypto-Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6039,7 +6042,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Money
+  m_text: Crypto
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a44c444803e215b4b8c2836cdd7da0ab, type: 2}
   m_sharedMaterial: {fileID: -8709908744473100234, guid: a44c444803e215b4b8c2836cdd7da0ab, type: 2}
@@ -6432,8 +6435,8 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 134973172}
   - {fileID: 1396714846}
   - {fileID: 875705129}
   - {fileID: 944258668}
   - {fileID: 1544204747}
-  - {fileID: 134973172}
