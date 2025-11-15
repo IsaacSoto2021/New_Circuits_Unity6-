@@ -21,8 +21,8 @@ public class HUDManager : MonoBehaviour
     {
         int _Hp = PlayerData.Instance._Hp;
         int _Scrap = PlayerData.Instance._scrap + PlayerData.Instance._scrapToAdd;
-        int _Crypto = PlayerData.Instance._scrap + PlayerData.Instance._scrapToAdd;
-        int _Electronics = PlayerData.Instance._scrap + PlayerData.Instance._scrapToAdd;
+        int _Crypto = PlayerData.Instance._crypto + PlayerData.Instance._cryptoToAdd;
+        int _Electronics = PlayerData.Instance._electronics + PlayerData.Instance._electronicsToAdd;
 
         _HpText.SetText("" + _Hp);//hud icon text
         _ScrapText.SetText("" + _Scrap);//same
