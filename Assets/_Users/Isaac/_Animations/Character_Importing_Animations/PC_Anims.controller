@@ -11,15 +11,15 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 2316192592152362598}
-    m_Position: {x: 430, y: 130, z: 0}
+    m_Position: {x: 370, y: 130, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 120, y: 270, z: 0}
+  m_AnyStatePosition: {x: 110, y: 260, z: 0}
   m_EntryPosition: {x: 120, y: 130, z: 0}
-  m_ExitPosition: {x: 120, y: 390, z: 0}
+  m_ExitPosition: {x: 690, y: 140, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 2316192592152362598}
 --- !u!206 &-5129353058280535963
@@ -58,7 +58,7 @@ BlendTree:
     m_Motion: {fileID: -203655887218126122, guid: 5a6516d0ec5e4d745bbb3c812d1f1cbd, type: 3}
     m_Threshold: 0.375
     m_Position: {x: 0, y: -1}
-    m_TimeScale: -1
+    m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Move X
     m_Mirror: 0
@@ -66,7 +66,7 @@ BlendTree:
     m_Motion: {fileID: -203655887218126122, guid: 995b3777a91496f4aaec4d9dccb68a12, type: 3}
     m_Threshold: 0.5
     m_Position: {x: -1, y: 0}
-    m_TimeScale: -1
+    m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Move X
     m_Mirror: 0
@@ -76,7 +76,7 @@ BlendTree:
   m_MaxThreshold: 0.5
   m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
-  m_BlendType: 2
+  m_BlendType: 1
 --- !u!206 &-465946473409155770
 BlendTree:
   m_ObjectHideFlags: 1
@@ -147,7 +147,7 @@ AnimatorState:
   m_PrefabAsset: {fileID: 0}
   m_Name: Movemnet
   m_Speed: 1
-  m_CycleOffset: 0
+  m_CycleOffset: 1
   m_Transitions: []
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
@@ -160,10 +160,10 @@ AnimatorState:
   m_TimeParameterActive: 0
   m_Motion: {fileID: -5129353058280535963}
   m_Tag: 
-  m_SpeedParameter: 
+  m_SpeedParameter: Move X
   m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
+  m_CycleOffsetParameter: Move X
+  m_TimeParameter: Move X
 --- !u!1102 &3612387132128476551
 AnimatorState:
   serializedVersion: 6
@@ -232,7 +232,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 3612387132128476551}
-    m_Position: {x: 250, y: 110, z: 0}
+    m_Position: {x: 340, y: 120, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
