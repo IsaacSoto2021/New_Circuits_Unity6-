@@ -1067,7 +1067,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 216135405}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1265254643}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &216135405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2785,7 +2797,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1009288943}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1265254643}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1009288943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3458,6 +3482,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1261671662}
   m_CullTransparentMesh: 1
+--- !u!1 &1265254643
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1265254645}
+  - component: {fileID: 1265254644}
+  m_Layer: 0
+  m_Name: StatScreenManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1265254644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265254643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea1d8678aacb58247887f38454cdd1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StatScreenManager
+  _ScrapCounter: {fileID: 497972366}
+  _CryptoCounter: {fileID: 867188674}
+  _ElectronicsCounter: {fileID: 84053150}
+  _KillsCounter: {fileID: 1413507213}
+  _RunsCounter: {fileID: 962276580}
+  _HealthCounter: {fileID: 1261671664}
+  _MovespeedCounter: {fileID: 70126338}
+  _DamageCounter: {fileID: 453599330}
+--- !u!4 &1265254645
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265254643}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.26349, y: 0, z: 102.40108}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1377260555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5763,9 +5839,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SkillTreeManager, Assembly-CSharp
-        m_MethodName: ClickReturnFromSkillTree
+      - m_Target: {fileID: 1265254644}
+        m_TargetAssemblyTypeName: StatScreenManager, Assembly-CSharp
+        m_MethodName: ClickBackToHQ
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5817,6 +5893,7 @@ CanvasRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1265254645}
   - {fileID: 1563706266}
   - {fileID: 192701361}
   - {fileID: 150880038}

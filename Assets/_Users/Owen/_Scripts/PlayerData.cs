@@ -15,6 +15,7 @@ public class PlayerData : Singleton<PlayerData>
     public int _crypto;
     public int _electronics;
     public int _kills;
+    public int _runs;
 
     public int _scrapToAdd;
     public int _cryptoToAdd;

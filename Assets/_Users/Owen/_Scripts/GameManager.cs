@@ -49,7 +49,10 @@ public class GameManager : Singleton<GameManager>
     {
         SceneManager.LoadSceneAsync(3);
     }
-
+    public void Stats()
+    {
+        SceneManager.LoadSceneAsync(6);
+    }
     public void GameScene()
     {
         SceneManager.LoadSceneAsync(1);

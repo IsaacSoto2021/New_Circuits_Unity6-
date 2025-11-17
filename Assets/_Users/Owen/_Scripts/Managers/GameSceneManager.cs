@@ -14,5 +14,8 @@ public class GameSceneManager : MonoBehaviour
     {
         GameManager.Instance.SkillTree();
     }
-
+    public void ClickStats()
+    {
+        GameManager.Instance.Stats();
+    }
 }

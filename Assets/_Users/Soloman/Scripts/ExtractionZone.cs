@@ -38,7 +38,7 @@ public class ExtractionZone : MonoBehaviour
             {
                 Debug.Log("Player extracted!");
                 PlayerData.Instance.GainTempResources();
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(5);
             }
         }
     }
