@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LaserTrap : MonoBehaviour
 {
@@ -50,6 +51,12 @@ public class LaserTrap : MonoBehaviour
             PlayerData.Instance._Hp -= damageAmount;
             PlayerData.Instance._Hp = Mathf.Max(PlayerData.Instance._Hp, 0);
             Debug.Log($"Laser hit player! -{damageAmount} HP | Current HP: {PlayerData.Instance._Hp}");
+        }
+
+        if (PlayerData.Instance._Hp <= 0)
+        {
+            SceneManager.LoadScene(0);
+            PlayerData.Instance.LoseTempResources();
         }
     }
 }
