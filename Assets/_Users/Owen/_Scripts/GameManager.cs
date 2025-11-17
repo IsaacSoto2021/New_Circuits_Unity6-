@@ -24,7 +24,7 @@ public class GameManager : Singleton<GameManager>
     }
     public void ResetPos()
     {
-        Player.Warp(_spawnPoint);
+        //Player.Warp(_spawnPoint);
         PlayerData.Instance.SetValues();
     }
     public void Quit()

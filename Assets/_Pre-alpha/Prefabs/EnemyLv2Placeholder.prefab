@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1777945675158935065, guid: aa58d08dc79915b418fc575bb502dde4, type: 3}
+      propertyPath: managedReferences[7512099122346459192].m_Value
+      value: 
+      objectReference: {fileID: 1672594811332616326, guid: db99381695efa514d8cbc2f09b7285c2, type: 3}
     - target: {fileID: 3958161092038719714, guid: aa58d08dc79915b418fc575bb502dde4, type: 3}
       propertyPath: m_Name
       value: EnemyLv2Placeholder
@@ -58,8 +62,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3958161092038719714, guid: aa58d08dc79915b418fc575bb502dde4, type: 3}
-      insertIndex: 6
+      insertIndex: -1
       addedObject: {fileID: 4753023603021496310}
+    - targetCorrespondingSourceObject: {fileID: 3958161092038719714, guid: aa58d08dc79915b418fc575bb502dde4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4089763317314603710}
   m_SourcePrefab: {fileID: 100100000, guid: aa58d08dc79915b418fc575bb502dde4, type: 3}
 --- !u!1 &6983447661053038348 stripped
 GameObject:
@@ -79,3 +86,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHPSystemLv2
   _HP: 150
+--- !u!114 &4089763317314603710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6983447661053038348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraphAgent
+  m_Graph: {fileID: -1817676650679021694, guid: af60cfa1ac715a1488e8bf1517978553, type: 2}
+  m_BlackboardVariableOverridesList:
+  - rid: 7512099122346459559
+  m_OriginalGraph: {fileID: 0}
+  m_IsInitialised: 0
+  m_IsStarted: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 7512099122346459559
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 1
+          m_Value1: 0
+        Name: Self
+        m_Value: {fileID: 6983447661053038348}

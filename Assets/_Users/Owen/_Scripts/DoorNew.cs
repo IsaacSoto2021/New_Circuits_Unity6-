@@ -12,7 +12,6 @@ public class DoorNew : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            print("W");
             MoveDoorDown();
         }
         if (collision.CompareTag("Enemy"))

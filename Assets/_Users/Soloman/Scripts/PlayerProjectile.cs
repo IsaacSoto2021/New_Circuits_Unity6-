@@ -12,7 +12,7 @@ public class PlayerProjectile : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.CompareTag("Player") || (collision.CompareTag("EnemyProjectile20")))
+        if (collision.CompareTag("Player") || collision.CompareTag("EnemyProjectile20") || collision.CompareTag("NoBulletCollision"))
         {
             return;
         }
