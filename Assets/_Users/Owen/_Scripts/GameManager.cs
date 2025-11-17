@@ -35,6 +35,7 @@ public class GameManager : Singleton<GameManager>
     public void Play()
     {
         SceneManager.LoadSceneAsync(3);
+        Time.timeScale = 1.0f;
     }
     public void SkillTree()
     {

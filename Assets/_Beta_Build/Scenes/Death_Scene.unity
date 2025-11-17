@@ -251,7 +251,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Electronic''s
+  m_text: 'Electronics
 
 '
   m_isRightToLeft: 0
@@ -280,8 +280,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 110
+  m_fontSizeBase: 110
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -505,10 +505,10 @@ RectTransform:
   - {fileID: 1401069107}
   - {fileID: 1630271849}
   - {fileID: 916823233}
-  - {fileID: 909261351}
-  - {fileID: 1341784200}
   - {fileID: 1058896039}
+  - {fileID: 909261351}
   - {fileID: 1477259383}
+  - {fileID: 1341784200}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -880,7 +880,7 @@ GameObject:
   - component: {fileID: 496536742}
   - component: {fileID: 496536741}
   m_Layer: 5
-  m_Name: Coins_Image
+  m_Name: Crypto-Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1165,7 +1165,7 @@ GameObject:
   - component: {fileID: 854240360}
   - component: {fileID: 854240359}
   m_Layer: 5
-  m_Name: Coins-Text
+  m_Name: Crypto-Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1210,7 +1210,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Coin's
+  m_text: Crypto
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a44c444803e215b4b8c2836cdd7da0ab, type: 2}
   m_sharedMaterial: {fileID: -8709908744473100234, guid: a44c444803e215b4b8c2836cdd7da0ab, type: 2}
@@ -1237,8 +1237,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 90
+  m_fontSizeBase: 90
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1408,8 +1408,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
+      - m_Target: {fileID: 7992636263604683168}
+        m_TargetAssemblyTypeName: DeathScreenManager, Assembly-CSharp
         m_MethodName: ClickQuit
         m_Mode: 1
         m_Arguments:
@@ -1470,7 +1470,7 @@ GameObject:
   - component: {fileID: 1007362133}
   - component: {fileID: 1007362132}
   m_Layer: 5
-  m_Name: Coins-Counter
+  m_Name: Crypto-Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1604,7 +1604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1058896039}
   m_Layer: 0
-  m_Name: Coins
+  m_Name: Crypto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1866,7 +1866,7 @@ Transform:
   m_GameObject: {fileID: 1341784199}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.0000153, y: -717, z: -170.18939}
+  m_LocalPosition: {x: 5.0000153, y: -717, z: -170.18933}
   m_LocalScale: {x: 9.617776, y: 9.617776, z: 9.617776}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2572,7 +2572,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1630271851}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7992636263604683168}
+        m_TargetAssemblyTypeName: DeathScreenManager, Assembly-CSharp
+        m_MethodName: ClickBackToHQ
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1630271851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3167,7 +3179,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Kill's
+  m_text: Kills
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a44c444803e215b4b8c2836cdd7da0ab, type: 2}
   m_sharedMaterial: {fileID: -8709908744473100234, guid: a44c444803e215b4b8c2836cdd7da0ab, type: 2}
@@ -3303,7 +3315,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Scrap''s
+  m_text: 'Scraps
 
 '
   m_isRightToLeft: 0
@@ -3384,10 +3396,95 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2068212981}
   m_CullTransparentMesh: 1
+--- !u!1001 &7992636263604683167
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3712685935108934674, guid: 6489bbf932d419546a1e3a9ffa2af7a4, type: 3}
+      propertyPath: m_Name
+      value: DeathScreenManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114541044890440258, guid: 6489bbf932d419546a1e3a9ffa2af7a4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.05422
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114541044890440258, guid: 6489bbf932d419546a1e3a9ffa2af7a4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114541044890440258, guid: 6489bbf932d419546a1e3a9ffa2af7a4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 191.66653
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114541044890440258, guid: 6489bbf932d419546a1e3a9ffa2af7a4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114541044890440258, guid: 6489bbf932d419546a1e3a9ffa2af7a4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114541044890440258, guid: 6489bbf932d419546a1e3a9ffa2af7a4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114541044890440258, guid: 6489bbf932d419546a1e3a9ffa2af7a4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114541044890440258, guid: 6489bbf932d419546a1e3a9ffa2af7a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114541044890440258, guid: 6489bbf932d419546a1e3a9ffa2af7a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114541044890440258, guid: 6489bbf932d419546a1e3a9ffa2af7a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8808370383798828091, guid: 6489bbf932d419546a1e3a9ffa2af7a4, type: 3}
+      propertyPath: _KillsCounter
+      value: 
+      objectReference: {fileID: 1483960998}
+    - target: {fileID: 8808370383798828091, guid: 6489bbf932d419546a1e3a9ffa2af7a4, type: 3}
+      propertyPath: _ScrapCounter
+      value: 
+      objectReference: {fileID: 1260723336}
+    - target: {fileID: 8808370383798828091, guid: 6489bbf932d419546a1e3a9ffa2af7a4, type: 3}
+      propertyPath: _CryptoCounter
+      value: 
+      objectReference: {fileID: 1007362132}
+    - target: {fileID: 8808370383798828091, guid: 6489bbf932d419546a1e3a9ffa2af7a4, type: 3}
+      propertyPath: _ElectronicsCounter
+      value: 
+      objectReference: {fileID: 551658248}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6489bbf932d419546a1e3a9ffa2af7a4, type: 3}
+--- !u!114 &7992636263604683168 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8808370383798828091, guid: 6489bbf932d419546a1e3a9ffa2af7a4, type: 3}
+  m_PrefabInstance: {fileID: 7992636263604683167}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea6765af6b60d7d4e8016c12e334eab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DeathScreenManager
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 7992636263604683167}
   - {fileID: 1563706266}
   - {fileID: 192701361}
   - {fileID: 150880038}

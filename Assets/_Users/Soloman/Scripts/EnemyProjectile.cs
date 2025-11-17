@@ -24,7 +24,7 @@ public class EnemyProjectile : MonoBehaviour
             PlayerData.Instance._Hp -= damage;
             if (PlayerData.Instance._Hp <= 0)//Player death handled here
             {
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(4);
                 PlayerData.Instance.LoseTempResources();
             }
             Destroy(gameObject);
