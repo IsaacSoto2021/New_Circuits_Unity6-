@@ -59,14 +59,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3958161092038719714, guid: aa58d08dc79915b418fc575bb502dde4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6905190006921852125}
+      addedObject: {fileID: 3616930848701279624}
   m_SourcePrefab: {fileID: 100100000, guid: aa58d08dc79915b418fc575bb502dde4, type: 3}
 --- !u!1 &1816020946133947073 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3958161092038719714, guid: aa58d08dc79915b418fc575bb502dde4, type: 3}
   m_PrefabInstance: {fileID: 3449189861209598499}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6905190006921852125
+--- !u!114 &3616930848701279624
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -75,23 +75,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1816020946133947073}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
+  m_Script: {fileID: 11500000, guid: 5471833bd259fc94181a60fc91e674b5, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraphAgent
-  m_Graph: {fileID: -1817676650679021694, guid: af60cfa1ac715a1488e8bf1517978553, type: 2}
-  m_BlackboardVariableOverridesList:
-  - rid: 7512099122346459560
-  m_OriginalGraph: {fileID: 0}
-  m_IsInitialised: 0
-  m_IsStarted: 0
-  references:
-    version: 2
-    RefIds:
-    - rid: 7512099122346459560
-      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 1
-          m_Value1: 0
-        Name: Self
-        m_Value: {fileID: 1816020946133947073}
+  m_EditorClassIdentifier: Assembly-CSharp::RandomMovement
+  agent: {fileID: 2161232729148523851}
+  _range: 10
+  _distance: 0
+  _chaseRange: 15
+  _centrePoint: {fileID: 0}
+  _playerRef: {fileID: 1672594811332616326, guid: db99381695efa514d8cbc2f09b7285c2, type: 3}
+  _playerInSight: 0
+--- !u!195 &2161232729148523851 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 3612949373276548968, guid: aa58d08dc79915b418fc575bb502dde4, type: 3}
+  m_PrefabInstance: {fileID: 3449189861209598499}
+  m_PrefabAsset: {fileID: 0}

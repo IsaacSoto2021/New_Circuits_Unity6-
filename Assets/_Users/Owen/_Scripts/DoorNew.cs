@@ -24,10 +24,12 @@ public class DoorNew : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+                        Debug.Log("player");
             MoveDoorUp();
         }
         if (collision.CompareTag("Enemy"))
         {
+            Debug.Log("ky");
             MoveDoorUp();
         }
 
