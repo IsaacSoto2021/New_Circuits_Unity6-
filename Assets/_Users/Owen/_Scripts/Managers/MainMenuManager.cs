@@ -18,5 +18,9 @@ public class MainMenuManager : MonoBehaviour
     {
         GameManager.Instance.Return();
     }
+    public void ClickHowToPlay()
+    {
+        GameManager.Instance.HowToPlay();
+    }
 
 }

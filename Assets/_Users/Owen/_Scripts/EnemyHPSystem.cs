@@ -20,6 +20,7 @@ public class EnemyHPSystem : MonoBehaviour
         if (_HP <= 0)
         {
             ActivateRandomTimes();
+            PlayerData.Instance._kills++;
             Destroy(gameObject);
         }
     }

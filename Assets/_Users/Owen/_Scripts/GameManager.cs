@@ -53,8 +53,13 @@ public class GameManager : Singleton<GameManager>
     {
         SceneManager.LoadSceneAsync(6);
     }
+    public void HowToPlay()
+    {
+        SceneManager.LoadSceneAsync(7);
+    }
     public void GameScene()
     {
+        Time.timeScale = 1.0f;
         SceneManager.LoadSceneAsync(1);
         //_playerRef = GameObject.FindWithTag("Player");
         //Player = _playerRef.GetComponent<NavMeshAgent>();

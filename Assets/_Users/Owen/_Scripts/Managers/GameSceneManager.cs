@@ -7,6 +7,7 @@ public class GameSceneManager : MonoBehaviour
 {
     public void ClickStartRun()
     {
+        PlayerData.Instance._runs++;
         PlayerData.Instance.LoseTempResources();
         GameManager.Instance.GameScene();
     }
