@@ -8,7 +8,6 @@ public class HUDManager : MonoBehaviour
     public GameObject _pauseMenu;
 
     public TMP_Text _HpText;
-    public TMP_Text _ScrapText;
     public TMP_Text _iScrapText;
     public TMP_Text _iCryptoText;
     public TMP_Text _iElectronicsText;
@@ -25,9 +24,8 @@ public class HUDManager : MonoBehaviour
         int _Electronics = PlayerData.Instance._electronics + PlayerData.Instance._electronicsToAdd;
 
         _HpText.SetText("" + _Hp);//hud icon text
-        _ScrapText.SetText("" + _Scrap);//same
 
-        _iScrapText.SetText("Scrap: " + _Scrap);
+        _iScrapText.SetText("Scrap: " + _Scrap);//inventory text
         _iCryptoText.SetText("Crypto: " + _Crypto);
         _iElectronicsText.SetText("Electronics: " + _Electronics);
     }
