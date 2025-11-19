@@ -21,8 +21,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7681570852066738671}
     - target: {fileID: 3638597900676808117, guid: 4181de1c8661f904ab9fb55ce0368619, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3638597900676808117, guid: 4181de1c8661f904ab9fb55ce0368619, type: 3}
       propertyPath: _playerRef
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3638597900676808117, guid: 4181de1c8661f904ab9fb55ce0368619, type: 3}
+      propertyPath: _chaseRange
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7768414528183209487, guid: 4181de1c8661f904ab9fb55ce0368619, type: 3}
       propertyPath: m_Speed
@@ -30,15 +38,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8828907144600681512, guid: 4181de1c8661f904ab9fb55ce0368619, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 7.17
       objectReference: {fileID: 0}
     - target: {fileID: 8828907144600681512, guid: 4181de1c8661f904ab9fb55ce0368619, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.0000019073486
       objectReference: {fileID: 0}
     - target: {fileID: 8828907144600681512, guid: 4181de1c8661f904ab9fb55ce0368619, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1.31
       objectReference: {fileID: 0}
     - target: {fileID: 8828907144600681512, guid: 4181de1c8661f904ab9fb55ce0368619, type: 3}
       propertyPath: m_LocalRotation.w
@@ -68,13 +76,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3638597900676808117, guid: 4181de1c8661f904ab9fb55ce0368619, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 913227285689841652, guid: 4181de1c8661f904ab9fb55ce0368619, type: 3}
       insertIndex: -1
       addedObject: {fileID: 845115233195032668}
+    - targetCorrespondingSourceObject: {fileID: 913227285689841652, guid: 4181de1c8661f904ab9fb55ce0368619, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5014003831960399433}
   m_SourcePrefab: {fileID: 100100000, guid: 4181de1c8661f904ab9fb55ce0368619, type: 3}
 --- !u!1 &1006826404195235860 stripped
 GameObject:
@@ -94,6 +106,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHPSystem
   _HP: 100
+--- !u!114 &5014003831960399433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006826404195235860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0038c16c34866b4f9e25c9c0dc0f7e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraphAgent
+  m_Graph: {fileID: -2951386483195614303, guid: 7caa5a754e4274a4a9b26cb81464dcad, type: 2}
+  m_BlackboardVariableOverridesList:
+  - rid: 7512099187532759211
+  m_OriginalGraph: {fileID: 0}
+  m_IsInitialised: 0
+  m_IsStarted: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 7512099187532759211
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 1
+          m_Value1: 0
+        Name: Self
+        m_Value: {fileID: 1006826404195235860}
 --- !u!195 &7681570852066738671 stripped
 NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 7768414528183209487, guid: 4181de1c8661f904ab9fb55ce0368619, type: 3}

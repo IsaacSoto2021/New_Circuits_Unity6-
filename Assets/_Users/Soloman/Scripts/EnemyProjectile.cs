@@ -15,11 +15,11 @@ public class EnemyProjectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.CompareTag("Enemy") || (collision.CompareTag("PlayerProjectile")))
+        if (collision.CompareTag("Enemy") || (collision.CompareTag("PlayerProjectile")) || collision.CompareTag("NoBulletCollision"))
         {
             return;
         }
-        else if (collision.CompareTag("Player")) 
+        else if (collision.CompareTag("Player"))
         {
             PlayerData.Instance._Hp -= damage;
             if (PlayerData.Instance._Hp <= 0)//Player death handled here

@@ -24,29 +24,28 @@ public class DoorNew : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-                        Debug.Log("player");
             MoveDoorUp();
         }
         if (collision.CompareTag("Enemy"))
         {
-            Debug.Log("ky");
             MoveDoorUp();
         }
 
     }
-    /* public IEnumerator Opendoor()
-     {
-         Door.SetActive(false);
-         yield return new WaitForSeconds;
-     }*/
+    public IEnumerator Opendoor()
+    {
+        TheDore.SetActive(false);
+        yield return new WaitForSeconds(3);
+        TheDore.SetActive(true);
+    }
     private void MoveDoorDown()
     {
-        TheDore.transform.position = _moveTo;
+        TheDore.SetActive(false);
 
     }
     private void MoveDoorUp()
     {
-        TheDore.transform.position = _originalPos;
+        TheDore.SetActive(true);
 
     }
     void Start()
