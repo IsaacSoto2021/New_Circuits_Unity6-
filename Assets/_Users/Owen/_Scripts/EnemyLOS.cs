@@ -1,3 +1,4 @@
+using Unity.Behavior;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -8,14 +9,26 @@ public class EnemyLOS : MonoBehaviour
     public LayerMask _obstacleLayer;
 
     private Transform _player;
-    private NavMeshAgent _agent;
-    private bool _playerInSight = false;
+
+    public bool _playerInSight = false;
+
     void Start()
     {
-        _agent = GetComponent<NavMeshAgent>();
-        _player = GameObject.FindGameObjectWithTag("_player").transform;
+        _player = GameObject.FindGameObjectWithTag("Player").transform;
     }
-    public bool Is_playerVisible()
+
+    private void Update()
+    {
+        if (_playerInSight == false)
+        {
+            IsPlayerVisible();
+        }
+        else if (_playerInSight == true)
+        {
+            Face_player();
+        }
+    }
+    public bool IsPlayerVisible()
     {
         if (_player == null) return false;
 
@@ -46,6 +59,7 @@ public class EnemyLOS : MonoBehaviour
         }
 
         _playerInSight = true;
+        Debug.Log("player seen");
         return true;
     }
 
@@ -70,7 +84,7 @@ public class EnemyLOS : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, _sightRange);
 
         // Draw field of view
-        Vector3 leftBoundary = Quaternion.Euler(0, _fieldOfView / 2, 0) * transform.forward * _sightRange;
+        Vector3 leftBoundary = Quaternion.Euler(0, -_fieldOfView / 2, 0) * transform.forward * _sightRange;
         Vector3 rightBoundary = Quaternion.Euler(0, _fieldOfView / 2, 0) * transform.forward * _sightRange;
 
         Gizmos.color = Color.red;
