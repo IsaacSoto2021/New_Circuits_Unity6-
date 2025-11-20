@@ -144,7 +144,7 @@ Transform:
   m_GameObject: {fileID: 6002612}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -340.2896, y: 1061, z: -4249.977}
+  m_LocalPosition: {x: 877.2104, y: 1526.991, z: -4249.977}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -955,6 +955,7 @@ GameObject:
   - component: {fileID: 196420396}
   - component: {fileID: 196420395}
   - component: {fileID: 196420394}
+  - component: {fileID: 196420397}
   m_Layer: 5
   m_Name: Epic-Target
   m_TagString: Untagged
@@ -1024,7 +1025,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 196420395}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 196420397}
+        m_TargetAssemblyTypeName: SkillInfoToggle, Assembly-CSharp
+        m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &196420395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1063,6 +1076,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196420392}
   m_CullTransparentMesh: 1
+--- !u!114 &196420397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196420392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f804347f635b8347a14c025a54aa3b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillInfoToggle
+  infoText: {fileID: 430975424}
+  upgradeButton: {fileID: 749145616}
 --- !u!1 &241575260
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,7 +1115,7 @@ Transform:
   m_GameObject: {fileID: 241575260}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -340.2896, y: 877, z: -4249.977}
+  m_LocalPosition: {x: 555.3607, y: 927.15326, z: -4249.977}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1132,7 +1159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -76.86, y: 29.589052}
+  m_AnchoredPosition: {x: -15, y: 28.5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &311362396
@@ -1229,6 +1256,7 @@ GameObject:
   - component: {fileID: 319216699}
   - component: {fileID: 319216698}
   - component: {fileID: 319216697}
+  - component: {fileID: 319216700}
   m_Layer: 5
   m_Name: Epic-Battery
   m_TagString: Untagged
@@ -1298,7 +1326,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 319216698}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 319216700}
+        m_TargetAssemblyTypeName: SkillInfoToggle, Assembly-CSharp
+        m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &319216698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1337,6 +1377,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 319216695}
   m_CullTransparentMesh: 1
+--- !u!114 &319216700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319216695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f804347f635b8347a14c025a54aa3b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillInfoToggle
+  infoText: {fileID: 6002612}
+  upgradeButton: {fileID: 1789994230}
 --- !u!1 &417918238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1398,7 +1452,7 @@ Transform:
   m_GameObject: {fileID: 430975424}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -340.2896, y: 0, z: -4249.977}
+  m_LocalPosition: {x: 265.10364, y: 1518.4196, z: -4249.977}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1642,7 +1696,7 @@ Transform:
   m_GameObject: {fileID: 488302106}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -350, y: -1200, z: 7033.6426}
+  m_LocalPosition: {x: -350, y: -1163, z: 7033.6426}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1711,7 +1765,7 @@ Transform:
   m_GameObject: {fileID: 518856658}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -340.2896, y: 1245, z: -4249.977}
+  m_LocalPosition: {x: 881.1595, y: 1223.4963, z: -4249.977}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1753,7 +1807,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -8.57}
+  m_AnchoredPosition: {x: 0, y: -16}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &521622957
@@ -1776,7 +1830,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Exit
+  m_text: 'Buy Upgrade
 
 '
   m_isRightToLeft: 0
@@ -1882,7 +1936,7 @@ Transform:
   m_GameObject: {fileID: 554767066}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -340.2896, y: 353, z: -4249.977}
+  m_LocalPosition: {x: 263.12915, y: 925.6159, z: -4249.977}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2269,7 +2323,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -8.57}
+  m_AnchoredPosition: {x: 0, y: -16}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &723610139
@@ -2292,7 +2346,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Exit
+  m_text: 'Buy Upgrade
 
 '
   m_isRightToLeft: 0
@@ -2409,7 +2463,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -76.86, y: -32.2}
+  m_AnchoredPosition: {x: -46.2, y: 44.7}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &749145618
@@ -2730,7 +2784,7 @@ Transform:
   m_GameObject: {fileID: 815688395}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -340.2896, y: 186, z: -4249.977}
+  m_LocalPosition: {x: 273.0019, y: 1220.6578, z: -4249.977}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2772,7 +2826,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -8.57}
+  m_AnchoredPosition: {x: 0, y: -16}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &845075122
@@ -2795,7 +2849,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Exit
+  m_text: 'Buy Upgrade
 
 '
   m_isRightToLeft: 0
@@ -3024,6 +3078,7 @@ GameObject:
   - component: {fileID: 858839571}
   - component: {fileID: 858839570}
   - component: {fileID: 858839569}
+  - component: {fileID: 858839572}
   m_Layer: 5
   m_Name: Epic-Shoe
   m_TagString: Untagged
@@ -3093,7 +3148,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 858839570}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 858839572}
+        m_TargetAssemblyTypeName: SkillInfoToggle, Assembly-CSharp
+        m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &858839570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3132,6 +3199,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 858839567}
   m_CullTransparentMesh: 1
+--- !u!114 &858839572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858839567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f804347f635b8347a14c025a54aa3b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillInfoToggle
+  infoText: {fileID: 1442530032}
+  upgradeButton: {fileID: 1134304385}
 --- !u!1 &875705127
 GameObject:
   m_ObjectHideFlags: 0
@@ -3975,7 +4056,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -8.57}
+  m_AnchoredPosition: {x: 0, y: -16}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1024752639
@@ -3998,7 +4079,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Exit
+  m_text: 'Buy Upgrade
 
 '
   m_isRightToLeft: 0
@@ -4113,7 +4194,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -8.57}
+  m_AnchoredPosition: {x: 0, y: -16}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1033475312
@@ -4136,7 +4217,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Exit
+  m_text: 'Buy Upgrade
 
 '
   m_isRightToLeft: 0
@@ -4242,7 +4323,7 @@ Transform:
   m_GameObject: {fileID: 1064496839}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -557.52057, y: -1140, z: 8164.6367}
+  m_LocalPosition: {x: -557.52057, y: -1232, z: 8164.6367}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4287,9 +4368,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allSkills: []
-  rootButton: {fileID: 1401973836}
-  tier1Button: {fileID: 2010840488}
-  tier2Button: {fileID: 196420394}
+  rootButton: {fileID: 1218904567}
+  tier1Button: {fileID: 2038164352}
+  tier2Button: {fileID: 749145618}
 --- !u!4 &1068510569
 Transform:
   m_ObjectHideFlags: 0
@@ -4521,6 +4602,7 @@ GameObject:
   - component: {fileID: 1116714846}
   - component: {fileID: 1116714845}
   - component: {fileID: 1116714844}
+  - component: {fileID: 1116714847}
   m_Layer: 5
   m_Name: Rare-Shoe
   m_TagString: Untagged
@@ -4590,7 +4672,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1116714845}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1116714847}
+        m_TargetAssemblyTypeName: SkillInfoToggle, Assembly-CSharp
+        m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1116714845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4629,6 +4723,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1116714842}
   m_CullTransparentMesh: 1
+--- !u!114 &1116714847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116714842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f804347f635b8347a14c025a54aa3b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillInfoToggle
+  infoText: {fileID: 1397970297}
+  upgradeButton: {fileID: 1304527361}
 --- !u!1 &1134304385
 GameObject:
   m_ObjectHideFlags: 0
@@ -4665,7 +4773,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -76.86, y: -5.85}
+  m_AnchoredPosition: {x: -32.3, y: 43.9}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1134304387
@@ -4762,6 +4870,7 @@ GameObject:
   - component: {fileID: 1154433418}
   - component: {fileID: 1154433417}
   - component: {fileID: 1154433416}
+  - component: {fileID: 1154433419}
   m_Layer: 5
   m_Name: Uncommon-Battery
   m_TagString: Untagged
@@ -4831,7 +4940,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1154433417}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1154433419}
+        m_TargetAssemblyTypeName: SkillInfoToggle, Assembly-CSharp
+        m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1154433417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4870,6 +4991,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1154433414}
   m_CullTransparentMesh: 1
+--- !u!114 &1154433419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154433414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f804347f635b8347a14c025a54aa3b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillInfoToggle
+  infoText: {fileID: 1996104503}
+  upgradeButton: {fileID: 1370211993}
 --- !u!1 &1165487097
 GameObject:
   m_ObjectHideFlags: 0
@@ -4981,7 +5116,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -76.86, y: -14.3}
+  m_AnchoredPosition: {x: -46.3, y: 14.7}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1218904567
@@ -5311,7 +5446,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -8.57}
+  m_AnchoredPosition: {x: 0, y: -16}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1296829319
@@ -5334,7 +5469,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Exit
+  m_text: 'Buy Upgrade
 
 '
   m_isRightToLeft: 0
@@ -5451,7 +5586,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -76.86, y: 2.45}
+  m_AnchoredPosition: {x: -31.771496, y: 28.937214}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1304527363
@@ -5548,6 +5683,7 @@ GameObject:
   - component: {fileID: 1312987713}
   - component: {fileID: 1312987712}
   - component: {fileID: 1312987711}
+  - component: {fileID: 1312987714}
   m_Layer: 5
   m_Name: Uncommon-Shoe
   m_TagString: Untagged
@@ -5617,7 +5753,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1312987712}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1312987714}
+        m_TargetAssemblyTypeName: SkillInfoToggle, Assembly-CSharp
+        m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1312987712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5656,6 +5804,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1312987709}
   m_CullTransparentMesh: 1
+--- !u!114 &1312987714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312987709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f804347f635b8347a14c025a54aa3b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillInfoToggle
+  infoText: {fileID: 241575260}
+  upgradeButton: {fileID: 1517202270}
 --- !u!1 &1333691586
 GameObject:
   m_ObjectHideFlags: 0
@@ -5681,19 +5843,19 @@ Transform:
   m_GameObject: {fileID: 1333691586}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 431.83954, y: -19.745378, z: 890.8334}
+  m_LocalPosition: {x: 431.83954, y: -111.74538, z: 890.8334}
   m_LocalScale: {x: 19.745378, y: 19.745378, z: 19.745378}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1370211994}
-  - {fileID: 311362395}
-  - {fileID: 1789994231}
-  - {fileID: 1517202271}
-  - {fileID: 1304527362}
-  - {fileID: 1134304386}
-  - {fileID: 1218904566}
-  - {fileID: 2038164351}
   - {fileID: 749145617}
+  - {fileID: 2038164351}
+  - {fileID: 1218904566}
+  - {fileID: 1134304386}
+  - {fileID: 1304527362}
+  - {fileID: 1517202271}
+  - {fileID: 1789994231}
+  - {fileID: 311362395}
+  - {fileID: 1370211994}
   m_Father: {fileID: 944258668}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1370211993
@@ -5732,7 +5894,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -76.86, y: 39.47}
+  m_AnchoredPosition: {x: -15.2, y: 14.5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1370211995
@@ -5847,9 +6009,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allSkills: []
-  rootButton: {fileID: 1154433416}
-  tier1Button: {fileID: 1741498610}
-  tier2Button: {fileID: 319216697}
+  rootButton: {fileID: 1370211995}
+  tier1Button: {fileID: 311362396}
+  tier2Button: {fileID: 1789994232}
 --- !u!4 &1378243626
 Transform:
   m_ObjectHideFlags: 0
@@ -6163,7 +6325,7 @@ Transform:
   m_GameObject: {fileID: 1397970297}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -340.2896, y: 702, z: -4249.977}
+  m_LocalPosition: {x: 550, y: 1225, z: -4249.977}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6183,6 +6345,7 @@ GameObject:
   - component: {fileID: 1401973838}
   - component: {fileID: 1401973837}
   - component: {fileID: 1401973836}
+  - component: {fileID: 1401973839}
   m_Layer: 5
   m_Name: Uncommon-Target
   m_TagString: Untagged
@@ -6252,7 +6415,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1401973837}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1401973839}
+        m_TargetAssemblyTypeName: SkillInfoToggle, Assembly-CSharp
+        m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1401973837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6291,6 +6466,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1401973834}
   m_CullTransparentMesh: 1
+--- !u!114 &1401973839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401973834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f804347f635b8347a14c025a54aa3b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillInfoToggle
+  infoText: {fileID: 554767066}
+  upgradeButton: {fileID: 1218904565}
 --- !u!1 &1413158305
 GameObject:
   m_ObjectHideFlags: 0
@@ -6527,7 +6716,7 @@ Transform:
   m_GameObject: {fileID: 1442530032}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -340.2896, y: 531, z: -4249.977}
+  m_LocalPosition: {x: 539.56445, y: 1513.3325, z: -4249.977}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6721,7 +6910,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -76.86, y: 12.66}
+  m_AnchoredPosition: {x: -31.5, y: 15.2}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1517202272
@@ -6994,7 +7183,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -8.57}
+  m_AnchoredPosition: {x: 0, y: -16}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1558467577
@@ -7017,7 +7206,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Exit
+  m_text: 'Buy Upgrade
 
 '
   m_isRightToLeft: 0
@@ -7495,7 +7684,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -8.57}
+  m_AnchoredPosition: {x: 0, y: -16}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1696213833
@@ -7518,7 +7707,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Exit
+  m_text: 'Buy Upgrade
 
 '
   m_isRightToLeft: 0
@@ -7624,19 +7813,19 @@ Transform:
   m_GameObject: {fileID: 1701609388}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 359.06537, y: -957, z: 11464}
+  m_LocalPosition: {x: 359.06537, y: -1049, z: 11464}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1401973835}
-  - {fileID: 2010840487}
   - {fileID: 196420393}
-  - {fileID: 1312987710}
-  - {fileID: 1116714843}
+  - {fileID: 2010840487}
+  - {fileID: 1401973835}
   - {fileID: 858839568}
-  - {fileID: 1154433415}
-  - {fileID: 1741498609}
+  - {fileID: 1116714843}
+  - {fileID: 1312987710}
   - {fileID: 319216696}
+  - {fileID: 1741498609}
+  - {fileID: 1154433415}
   m_Father: {fileID: 944258668}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1741498608
@@ -7651,6 +7840,7 @@ GameObject:
   - component: {fileID: 1741498612}
   - component: {fileID: 1741498611}
   - component: {fileID: 1741498610}
+  - component: {fileID: 1741498613}
   m_Layer: 5
   m_Name: Rare-Battery
   m_TagString: Untagged
@@ -7720,7 +7910,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1741498611}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1741498613}
+        m_TargetAssemblyTypeName: SkillInfoToggle, Assembly-CSharp
+        m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1741498611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7759,6 +7961,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1741498608}
   m_CullTransparentMesh: 1
+--- !u!114 &1741498613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741498608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f804347f635b8347a14c025a54aa3b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillInfoToggle
+  infoText: {fileID: 518856658}
+  upgradeButton: {fileID: 311362394}
 --- !u!1 &1789994230
 GameObject:
   m_ObjectHideFlags: 0
@@ -7795,7 +8011,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -76.86, y: 21}
+  m_AnchoredPosition: {x: -15.2, y: 44.6}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1789994232
@@ -8465,7 +8681,7 @@ Transform:
   m_GameObject: {fileID: 1996104503}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -340.2896, y: 1434, z: -4249.977}
+  m_LocalPosition: {x: 877.2104, y: 940.9579, z: -4249.977}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8485,6 +8701,7 @@ GameObject:
   - component: {fileID: 2010840490}
   - component: {fileID: 2010840489}
   - component: {fileID: 2010840488}
+  - component: {fileID: 2010840491}
   m_Layer: 5
   m_Name: Rare-Target
   m_TagString: Untagged
@@ -8554,7 +8771,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2010840489}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2010840491}
+        m_TargetAssemblyTypeName: SkillInfoToggle, Assembly-CSharp
+        m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2010840489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8593,6 +8822,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2010840486}
   m_CullTransparentMesh: 1
+--- !u!114 &2010840491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010840486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f804347f635b8347a14c025a54aa3b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillInfoToggle
+  infoText: {fileID: 815688395}
+  upgradeButton: {fileID: 2038164350}
 --- !u!1 &2033572077
 GameObject:
   m_ObjectHideFlags: 0
@@ -8627,7 +8870,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -8.57}
+  m_AnchoredPosition: {x: 0, y: -16}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &2033572079
@@ -8650,7 +8893,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Exit
+  m_text: 'Buy Upgrade
 
 '
   m_isRightToLeft: 0
@@ -8767,7 +9010,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -76.86, y: -23.7}
+  m_AnchoredPosition: {x: -45.8, y: 28.7}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2038164352
@@ -9330,9 +9573,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allSkills: []
-  rootButton: {fileID: 1312987711}
-  tier1Button: {fileID: 1116714844}
-  tier2Button: {fileID: 858839569}
+  rootButton: {fileID: 1517202272}
+  tier1Button: {fileID: 1304527363}
+  tier2Button: {fileID: 1134304387}
 --- !u!4 &2134740135
 Transform:
   m_ObjectHideFlags: 0
@@ -9357,7 +9600,7 @@ SceneRoots:
   - {fileID: 875705129}
   - {fileID: 944258668}
   - {fileID: 1544204747}
+  - {fileID: 1068510569}
   - {fileID: 2134740135}
   - {fileID: 1378243626}
-  - {fileID: 1068510569}
   - {fileID: 1085359121}
