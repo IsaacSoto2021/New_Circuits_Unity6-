@@ -53,15 +53,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6bc9c50862f392344ab56ac30484c52c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.65
+      value: 6.4021378
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6bc9c50862f392344ab56ac30484c52c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 0.53129977
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6bc9c50862f392344ab56ac30484c52c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.33
+      value: 1.9914627
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6bc9c50862f392344ab56ac30484c52c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -199,10 +199,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 200edf44a87c1af4ba5b0ea1a27e88eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyShooting
-  projectilePrefab: {fileID: 6137983451535075744, guid: 5717e758c001b4f4eb0b795574fba3f7, type: 3}
+  projectilePrefab: {fileID: 5890554577015296529, guid: 39a78d4400023084bb34cc45214484ea, type: 3}
   firePoint: {fileID: 6441972232114270502}
   shootRange: 5
-  fireRate: 1.5
+  fireRate: 1.8
   projectileSpeed: 6
   _sightRange: 10
   _fieldOfView: 90
@@ -210,6 +210,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   _playerInSight: 0
+  maxShotRandomness: 15
+  useRandomness: 1
 --- !u!114 &6157638990765443041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6569008206bf8a244a16b86289d12958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHPSystemLv2
-  _HP: 150
+  _HP: 200
 --- !u!114 &366216949304181187
 MonoBehaviour:
   m_ObjectHideFlags: 0

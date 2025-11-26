@@ -10,11 +10,16 @@ public class EnemyShooting : MonoBehaviour
     public float fireRate = 1f;
     [SerializeField] float projectileSpeed = 8f;
 
+    //line of sight variables
     public float _sightRange = 10f;
     public float _fieldOfView = 90f;
     public LayerMask _obstacleLayer;
 
     public bool _playerInSight = false;
+
+    //Variables for shot randomness
+    [SerializeField] float maxShotRandomness = 0f; //Maximum angle in degrees
+    [SerializeField] bool useRandomness = true;
 
     private float fireCooldown = 0f;
     private Transform player;
@@ -36,6 +41,7 @@ public class EnemyShooting : MonoBehaviour
         fireCooldown -= Time.deltaTime;
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+
         if (distanceToPlayer <= shootRange)
         {
             IsPlayerVisible();
@@ -89,12 +95,30 @@ public class EnemyShooting : MonoBehaviour
 
         Vector3 direction = (player.position - firePoint.position).normalized;
 
+        // Apply randomness if enabled
+        if (useRandomness && maxShotRandomness > 0)
+        {
+            direction = GetRandomizedDirection(direction);
+        }
+
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.LookRotation(direction));
 
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
         if (rb != null)
         {
             rb.linearVelocity = direction * projectileSpeed;
+        }
+        Vector3 GetRandomizedDirection(Vector3 originalDirection)
+        {
+            float horizontalRandomAngle = Random.Range(-maxShotRandomness, maxShotRandomness);
+            float verticalRandomAngle = Random.Range(-maxShotRandomness, maxShotRandomness);
+
+            Quaternion horizontalSpread = Quaternion.AngleAxis(horizontalRandomAngle, Vector3.up);
+            Quaternion verticalSpread = Quaternion.AngleAxis(verticalRandomAngle, Vector3.right);
+
+            Vector3 randomizedDirection = horizontalSpread * verticalSpread * originalDirection;
+
+            return randomizedDirection.normalized;
         }
     }
 

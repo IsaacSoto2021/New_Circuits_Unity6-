@@ -172,6 +172,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   _playerInSight: 0
+  maxShotRandomness: 10
+  useRandomness: 1
 --- !u!114 &65720869512169984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc5778adbaf19314da2dd7fb1d6b7467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHPSystem
-  _HP: 100
+  _HP: 150
 --- !u!136 &6829400174014264323
 CapsuleCollider:
   m_ObjectHideFlags: 0

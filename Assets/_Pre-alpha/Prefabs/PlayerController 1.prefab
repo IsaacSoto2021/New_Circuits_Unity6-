@@ -228,6 +228,26 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5342276811943943083, guid: db99381695efa514d8cbc2f09b7285c2, type: 3}
+      propertyPath: BuffTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5342276811943943083, guid: db99381695efa514d8cbc2f09b7285c2, type: 3}
+      propertyPath: shootRange
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5342276811943943083, guid: db99381695efa514d8cbc2f09b7285c2, type: 3}
+      propertyPath: _sightRange
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5342276811943943083, guid: db99381695efa514d8cbc2f09b7285c2, type: 3}
+      propertyPath: TempFireRate
+      value: 2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5342276811943943083, guid: db99381695efa514d8cbc2f09b7285c2, type: 3}
+      propertyPath: _obstacleLayer.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

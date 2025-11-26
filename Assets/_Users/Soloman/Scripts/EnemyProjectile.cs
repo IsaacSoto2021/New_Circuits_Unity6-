@@ -5,9 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class EnemyProjectile : MonoBehaviour
 {
-    public float lifetime = 5f;
-
-    public int damage = 10;
+    [SerializeField] public float lifetime;
+    [SerializeField] public int damage;
     void Start()
     {
         Destroy(gameObject, lifetime);
