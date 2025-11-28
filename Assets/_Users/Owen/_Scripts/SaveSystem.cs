@@ -8,9 +8,9 @@ public static class SaveSystem
 
 }
 
-[Serializable]
+/*[Serializable]
 public class PlayerInfo
 {
     [SerializeField] public List<>
 
-}
+}*/
