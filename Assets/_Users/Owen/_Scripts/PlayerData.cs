@@ -52,6 +52,7 @@ public class PlayerData : Singleton<PlayerData>
     private void Start()
     {
         SetValues();
+        SaveSystem.Load();
     }
 
     public void LoseTempResources()
@@ -77,11 +78,29 @@ public class PlayerData : Singleton<PlayerData>
     public void Save(ref PlayerSaveInfo data)
     {
         data._scrap = _scrap;
+        data._crypto = _crypto;
+        data._electronics = _electronics;
+
+        data._runs = _runs;
+        data._kills = _kills;
+
+        data._maxHp = _maxHp;
+        data._damage = _damage;
+        data._moveSpeed = _moveSpeed;
     }
 
     public void Load(ref PlayerSaveInfo data)
     {
         _scrap = data._scrap;
+        _crypto = data._crypto;
+        _electronics = data._electronics;
+
+        _maxHp = data._maxHp;
+        _damage = data._damage;
+        _moveSpeed = data._moveSpeed;
+
+        _kills = data._kills;
+        _runs = data._runs;
     }
 
     private void OnApplicationPause(bool pause)
@@ -101,5 +120,14 @@ public class PlayerData : Singleton<PlayerData>
 [System.Serializable]
 public struct PlayerSaveInfo
 {
+    public int _maxHp;
+    public int _damage;
+    public float _moveSpeed;
+
     public int _scrap;
+    public int _crypto;
+    public int _electronics;
+
+    public int _kills;
+    public int _runs;
 }
