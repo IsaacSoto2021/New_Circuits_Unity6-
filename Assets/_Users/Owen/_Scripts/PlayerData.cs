@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class PlayerData : Singleton<PlayerData>
@@ -28,6 +30,17 @@ public class PlayerData : Singleton<PlayerData>
         if (_Hp > _maxHp)
         {
             _Hp = _maxHp;
+        }
+        if (Keyboard.current.numpad0Key.wasPressedThisFrame)
+        {
+            SaveSystem.Save();
+            Debug.Log("save");
+        }
+        if (Keyboard.current.numpad1Key.wasPressedThisFrame)
+        {
+            SaveSystem.Load();
+            Debug.Log("load");
+
         }
     }
     public void SetValues()
@@ -61,5 +74,32 @@ public class PlayerData : Singleton<PlayerData>
         Debug.Log("Crypto: " + _crypto);
 
     }
+    public void Save(ref PlayerSaveInfo data)
+    {
+        data._scrap = _scrap;
+    }
 
+    public void Load(ref PlayerSaveInfo data)
+    {
+        _scrap = data._scrap;
+    }
+
+    private void OnApplicationPause(bool pause)
+    {
+        if (pause)
+        {
+            SaveSystem.Save();
+        }
+    }
+
+    private void OnApplicationQuit()
+    {
+        SaveSystem.Save();
+    }
+}
+
+[System.Serializable]
+public struct PlayerSaveInfo
+{
+    public int _scrap;
 }
