@@ -38,7 +38,7 @@ public class DoorInteraction : MonoBehaviour
             }
             else if (hasKeycardLock)
             {
-                PlayerData.Instance._hasKeycard = false;
+                //PlayerData.Instance._hasKeycard = false;
                 buttonUnlockedDoor.SetActive(true);
             }
             else

@@ -21,7 +21,7 @@ public class StatScreenManager : MonoBehaviour
         int _Runs = PlayerData.Instance._runs;
         int _Health = PlayerData.Instance._maxHp;
         float _Movespeed = PlayerData.Instance._moveSpeed;
-        float _Damage = PlayerData.Instance._damage;
+        int _Damage = PlayerData.Instance._damage;
 
         _ScrapCounter.SetText("Scrap: " + _Scrap);
         _CryptoCounter.SetText("Crypto: " + _Crypto);

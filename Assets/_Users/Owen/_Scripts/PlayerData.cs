@@ -23,24 +23,28 @@ public class PlayerData : Singleton<PlayerData>
     public int _cryptoToAdd;
     public int _electronicsToAdd;
 
-    public bool _hasKeycard;
+    public bool _hasKeycard1;
+    public bool _hasKeycard2;
+    public bool _hasKeycard3;
+
+    //skill tree upgrades
+    public bool _hasUncDamage;
+    public bool _hasRareDamage;
+    public bool _hasEpicDamage;
+
+    public bool _hasUncSpeed;
+    public bool _hasRareSpeed;
+    public bool _hasEpicSpeed;
+
+    public bool _hasUncHP;
+    public bool _hasRareHP;
+    public bool _hasEpicHP;
 
     private void Update()
     {
         if (_Hp > _maxHp)
         {
             _Hp = _maxHp;
-        }
-        if (Keyboard.current.numpad0Key.wasPressedThisFrame)
-        {
-            SaveSystem.Save();
-            Debug.Log("save");
-        }
-        if (Keyboard.current.numpad1Key.wasPressedThisFrame)
-        {
-            SaveSystem.Load();
-            Debug.Log("load");
-
         }
     }
     public void SetValues()
@@ -87,6 +91,18 @@ public class PlayerData : Singleton<PlayerData>
         data._maxHp = _maxHp;
         data._damage = _damage;
         data._moveSpeed = _moveSpeed;
+
+        data._hasUncDamage = _hasUncDamage;
+        data._hasRareDamage = _hasRareDamage;
+        data._hasEpicDamage = _hasEpicDamage;
+
+        data._hasUncSpeed = _hasUncSpeed;
+        data._hasRareSpeed = _hasRareSpeed;
+        data._hasEpicSpeed = _hasEpicSpeed;
+
+        data._hasUncHP = _hasUncHP;
+        data._hasRareHP = _hasRareHP;
+        data._hasEpicHP = _hasEpicHP;
     }
 
     public void Load(ref PlayerSaveInfo data)
@@ -101,6 +117,18 @@ public class PlayerData : Singleton<PlayerData>
 
         _kills = data._kills;
         _runs = data._runs;
+
+        _hasUncDamage = data._hasUncDamage;
+        _hasRareDamage = data._hasRareDamage;
+        _hasEpicDamage = data._hasEpicDamage;
+
+        _hasUncSpeed = data._hasUncSpeed;
+        _hasRareSpeed = data._hasRareSpeed;
+        _hasEpicSpeed = data._hasEpicSpeed;
+
+        _hasUncHP = data._hasUncHP;
+        _hasRareHP = data._hasRareHP;
+        _hasEpicHP = data._hasEpicHP;
     }
 
     private void OnApplicationPause(bool pause)
@@ -130,4 +158,16 @@ public struct PlayerSaveInfo
 
     public int _kills;
     public int _runs;
+
+    public bool _hasUncDamage;
+    public bool _hasRareDamage;
+    public bool _hasEpicDamage;
+
+    public bool _hasUncSpeed;
+    public bool _hasRareSpeed;
+    public bool _hasEpicSpeed;
+
+    public bool _hasUncHP;
+    public bool _hasRareHP;
+    public bool _hasEpicHP;
 }
