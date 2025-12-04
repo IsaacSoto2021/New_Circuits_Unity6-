@@ -17,6 +17,10 @@ public class HUDManager : MonoBehaviour
     private bool _isInventoryOpen;
     private bool _isOBJListOpen;
 
+    public GameObject _RedKeycardIcon;
+    public GameObject _BlueKeycardIcon;
+    public GameObject _GreenKeycardIcon;
+
     // Update is called once per frame
     void Update()
     {
@@ -30,6 +34,31 @@ public class HUDManager : MonoBehaviour
         _iScrapText.SetText(":" + _Scrap);//inventory text
         _iCryptoText.SetText(":" + _Crypto);
         _iElectronicsText.SetText(":" + _Electronics);
+
+        if (PlayerData.Instance._hasKeycardRed)
+        {
+            _RedKeycardIcon.SetActive(true);
+        }
+        if (!PlayerData.Instance._hasKeycardRed)
+        {
+            _RedKeycardIcon.SetActive(false);
+        }
+        if (PlayerData.Instance._hasKeycardBlue)
+        {
+            _BlueKeycardIcon.SetActive(true);
+        }
+        if (!PlayerData.Instance._hasKeycardBlue)
+        {
+            _BlueKeycardIcon.SetActive(false);
+        }
+        if (PlayerData.Instance._hasKeycardGreen)
+        {
+            _GreenKeycardIcon.SetActive(true);
+        }
+        if (!PlayerData.Instance._hasKeycardGreen)
+        {
+            _GreenKeycardIcon.SetActive(false);
+        }
     }
 
     private void Start()

@@ -10,7 +10,7 @@ public class PlayerData : Singleton<PlayerData>
 {
     public int _maxHp = 100;
     public int _Hp = 0;
-    public int _damage = 25;
+    public int _damage = 50;
     public float _moveSpeed = 3.0f;
 
     public int _scrap;
@@ -23,9 +23,9 @@ public class PlayerData : Singleton<PlayerData>
     public int _cryptoToAdd;
     public int _electronicsToAdd;
 
-    public bool _hasKeycard1;
-    public bool _hasKeycard2;
-    public bool _hasKeycard3;
+    public bool _hasKeycardRed;
+    public bool _hasKeycardBlue;
+    public bool _hasKeycardGreen;
 
     //skill tree upgrades
     public bool _hasUncDamage;
