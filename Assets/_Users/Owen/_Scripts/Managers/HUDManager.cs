@@ -21,6 +21,13 @@ public class HUDManager : MonoBehaviour
     public GameObject _BlueKeycardIcon;
     public GameObject _GreenKeycardIcon;
 
+    public GameObject Heart1;
+    public GameObject Heart2;
+    public GameObject Heart3;
+    public GameObject Heart4;
+    public GameObject Heart5;
+    public GameObject Heart6;
+
     // Update is called once per frame
     void Update()
     {
@@ -28,6 +35,8 @@ public class HUDManager : MonoBehaviour
         int _Scrap = PlayerData.Instance._scrap + PlayerData.Instance._scrapToAdd;
         int _Crypto = PlayerData.Instance._crypto + PlayerData.Instance._cryptoToAdd;
         int _Electronics = PlayerData.Instance._electronics + PlayerData.Instance._electronicsToAdd;
+        //float _PercentHp = ((PlayerData.Instance._Hp / PlayerData.Instance._maxHp) * 100);
+        //Debug.Log(_PercentHp);
 
         _HpText.SetText("" + _Hp);//hud icon text
 
@@ -59,6 +68,40 @@ public class HUDManager : MonoBehaviour
         {
             _GreenKeycardIcon.SetActive(false);
         }
+        /* if (_PercentHp == 100)
+         {
+             HideAllHearts();
+             Heart1.SetActive(true);
+         }
+         if ((_PercentHp < 100) && (_PercentHp >= 76))
+         {
+             HideAllHearts();
+             Heart2.SetActive(true);
+
+         }
+         if ((_PercentHp < 76) && (_PercentHp >= 51))
+         {
+             HideAllHearts();
+             Heart3.SetActive(true);
+
+         }
+         if ((_PercentHp < 50) && (_PercentHp >= 26))
+         {
+             HideAllHearts();
+             Heart4.SetActive(true);
+
+         }
+         if ((_PercentHp < 26) && (_PercentHp >= 1))
+         {
+             HideAllHearts();
+             Heart5.SetActive(true);
+
+         }
+         if (_PercentHp <= 0)
+         {
+             HideAllHearts();
+             Heart6.SetActive(true);
+         }*/
     }
 
     private void Start()
@@ -67,6 +110,15 @@ public class HUDManager : MonoBehaviour
         _isOBJListOpen = false;
     }
 
+    public void HideAllHearts()
+    {
+        Heart1.SetActive(false);
+        Heart2.SetActive(false);
+        Heart3.SetActive(false);
+        Heart4.SetActive(false);
+        Heart5.SetActive(false);
+        Heart6.SetActive(false);
+    }
     public void OpenAndCloseInventory()
     {
         if (!_isInventoryOpen)

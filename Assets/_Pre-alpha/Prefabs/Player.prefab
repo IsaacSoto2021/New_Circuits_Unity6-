@@ -161,8 +161,19 @@ MonoBehaviour:
   projectilePrefab: {fileID: 2879427803763075603, guid: 150ade21e2954e746b3f9ddcc7591942, type: 3}
   firePoint: {fileID: 5296464399599938436}
   shootRange: 6
-  fireRate: 1.2
   projectileSpeed: 10
+  BuffTime: 0
+  TempFireRate: 0
+  Player: {fileID: 7553875999705753665}
+  OriginalFireRate: 0
+  _shouldLookAtEnemy: 0
+  _sightRange: 10
+  _fieldOfView: 90
+  _obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  _targetInSight: 0
+  fireRate: 1.2
 --- !u!114 &7489194870905663923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +189,7 @@ MonoBehaviour:
   JoystickSize: {x: 300, y: 300}
   Joystick: {fileID: 0}
   Player: {fileID: 7553875999705753665}
+  _playerShooting: {fileID: 5342276811943943083}
 --- !u!114 &7214845452351550995
 MonoBehaviour:
   m_ObjectHideFlags: 0

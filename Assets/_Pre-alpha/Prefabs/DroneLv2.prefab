@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6569008206bf8a244a16b86289d12958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHPSystemLv2
-  _HP: 200
+  _HP: 150
 --- !u!114 &366216949304181187
 MonoBehaviour:
   m_ObjectHideFlags: 0

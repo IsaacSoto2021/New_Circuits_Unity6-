@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class PlayerData : Singleton<PlayerData>
 {
     public int _maxHp = 100;
-    public int _Hp = 0;
+    public int _Hp = 100;
     public int _damage = 50;
     public float _moveSpeed = 3.0f;
 

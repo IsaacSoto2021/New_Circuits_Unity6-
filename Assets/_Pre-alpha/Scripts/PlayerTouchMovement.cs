@@ -5,19 +5,19 @@ using ETouch = UnityEngine.InputSystem.EnhancedTouch;
 
 public class PlayerTouchMovement : MonoBehaviour
 {
-    [SerializeField]
-    private Vector2 JoystickSize = new Vector2(300, 300);
-    [SerializeField]
-    private FloatingJoystick Joystick;
-    [SerializeField]
-    private NavMeshAgent Player;
+    [SerializeField] private Vector2 JoystickSize = new Vector2(300, 300);
+    [SerializeField] private FloatingJoystick Joystick;
+    [SerializeField] private NavMeshAgent Player;
+    [SerializeField] public PlayerShooting _playerShooting;
+
+    private float BottomMargin = 50;
 
     private Finger MovementFinger;
     private Vector2 MovementAmount;
 
     private void OnEnable()
     {
-        EnhancedTouchSupport.Enable(); // starting with Unity 2022 this does not work! You need to attach a TouchSimulation.cs script to your player
+        EnhancedTouchSupport.Enable();
         ETouch.Touch.onFingerDown += HandleFingerDown;
         ETouch.Touch.onFingerUp += HandleLoseFinger;
         ETouch.Touch.onFingerMove += HandleFingerMove;
@@ -28,7 +28,7 @@ public class PlayerTouchMovement : MonoBehaviour
         ETouch.Touch.onFingerDown -= HandleFingerDown;
         ETouch.Touch.onFingerUp -= HandleLoseFinger;
         ETouch.Touch.onFingerMove -= HandleFingerMove;
-        EnhancedTouchSupport.Disable(); // You need to attach a TouchSimulation.cs script to your player
+        EnhancedTouchSupport.Disable();
     }
 
     private void HandleFingerMove(Finger MovedFinger)
@@ -78,10 +78,11 @@ public class PlayerTouchMovement : MonoBehaviour
             MovementAmount = Vector2.zero;
             Joystick.gameObject.SetActive(true);
             Joystick.RectTransform.sizeDelta = JoystickSize;
-            Joystick.RectTransform.anchoredPosition = ClampStartPosition(TouchedFinger.screenPosition);
+            Joystick.RectTransform.anchoredPosition = new Vector2(Screen.width / 2f, JoystickSize.y / 2f + BottomMargin);
+
         }
     }
-
+    /*
     private Vector2 ClampStartPosition(Vector2 StartPosition)
     {
         if (StartPosition.x < JoystickSize.x / 2)
@@ -99,7 +100,7 @@ public class PlayerTouchMovement : MonoBehaviour
         }
 
         return StartPosition;
-    }
+    }*/
 
     private void FixedUpdate()
     {
@@ -108,8 +109,13 @@ public class PlayerTouchMovement : MonoBehaviour
             0,
             MovementAmount.y
         );
+        if (_playerShooting._shouldLookAtEnemy == false)
+        {
+            Player.transform.LookAt(Player.transform.position + scaledMovement, Vector3.up);
+        }
+        else if (_playerShooting.target == null)
+            Player.transform.LookAt(Player.transform.position + scaledMovement, Vector3.up);
 
-        Player.transform.LookAt(Player.transform.position + scaledMovement, Vector3.up);
         Player.Move(scaledMovement);
     }
 }

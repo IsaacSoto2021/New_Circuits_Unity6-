@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerShooting : MonoBehaviour
 {
@@ -11,8 +12,11 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] float projectileSpeed = 10f;
     [SerializeField] public float BuffTime;
     [SerializeField] public float TempFireRate;
-    [SerializeField] public float OriginalFireRate;
+    [SerializeField] private NavMeshAgent Player;
 
+    public float OriginalFireRate;
+
+    public bool _shouldLookAtEnemy = false;
 
     //line of sight variables
     public float _sightRange = 10f;
@@ -24,7 +28,7 @@ public class PlayerShooting : MonoBehaviour
     public float fireRate = 1f;
     private float fireCooldown = 0f;
 
-    private Transform target;
+    public Transform target;
 
     void Update()
     {
@@ -44,9 +48,20 @@ public class PlayerShooting : MonoBehaviour
             if (distanceToTarget <= shootRange)
             {
                 IsTargetVisible();
+                if (_targetInSight)
+                {
+                    _shouldLookAtEnemy = true;
+                }
+                else
+                {
+                    target = null;
+                    _shouldLookAtEnemy = false;
+                }
                 if (fireCooldown <= 0f && _targetInSight)
                 {
+                    Player.transform.LookAt(target.transform);
                     ShootAt(targetObj);
+                    Debug.Log("shot");
                     fireCooldown = 1f / fireRate;
                 }
 
