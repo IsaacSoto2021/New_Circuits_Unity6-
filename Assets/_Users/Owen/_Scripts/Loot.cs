@@ -5,13 +5,21 @@ using UnityEngine;
 public class Loot : MonoBehaviour
 {
     bool _unOpened = true;
+
     public GameObject _ScrapPrefab;
     public GameObject _ElectronicPrefab;
     public GameObject _CryptoPrefab;
+    public GameObject _HealPrefab;
+
     public Transform _SpawnPos1;
     public Transform _SpawnPos2;
     public Transform _SpawnPos3;
     public Transform _SpawnPos4;
+
+    [SerializeField] private AudioSource _ChestOpenSFX;
+    [SerializeField] private AudioSource _ChestLureSFX;
+    [SerializeField] private Animator _ChestAnimator;
+
     private void Start()
     {
         _unOpened = true;
@@ -20,12 +28,29 @@ public class Loot : MonoBehaviour
     {
         if (collision.CompareTag("Player") && _unOpened)
         {
-            GameObject Scrap1 = Instantiate(_ElectronicPrefab, _SpawnPos1);
-            GameObject Scrap2 = Instantiate(_ElectronicPrefab, _SpawnPos2);
-            ScrapChance();
-            CryptoChance();
-            _unOpened = false;
+            OpenChest();
         }
+    }
+    public void OpenChest()
+    {
+        StartCoroutine(OpenChestRoutine());
+        _unOpened = false;
+    }
+    IEnumerator OpenChestRoutine()
+    {
+        _ChestLureSFX.loop = false;
+        _ChestLureSFX.Stop();
+        _ChestAnimator.SetTrigger("Open");
+
+        yield return new WaitForSeconds(0.5f);
+        _ChestOpenSFX.Play();
+        yield return new WaitForSeconds(0.5f);
+
+        GameObject Scrap1 = Instantiate(_ElectronicPrefab, _SpawnPos1);
+        GameObject Scrap2 = Instantiate(_HealPrefab, _SpawnPos2);
+
+        ScrapChance();
+        CryptoChance();
     }
     private void ScrapChance()
     {
@@ -42,7 +67,7 @@ public class Loot : MonoBehaviour
         if (spawnChance == 1)
         {
             GameObject Scrap4 = Instantiate(_CryptoPrefab, _SpawnPos4);
-            Debug.Log("crpy");
+            Debug.Log("crypto");
 
         }
     }

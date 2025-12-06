@@ -59,7 +59,6 @@ public class EnemyLOS : MonoBehaviour
         }
 
         _playerInSight = true;
-        Debug.Log("player seen");
         return true;
     }
 
