@@ -2100,6 +2100,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3490093028076338702, guid: d7bea8510411b064ab6ca7129161344d, type: 3}
+      propertyPath: _HP
+      value: 200000
+      objectReference: {fileID: 0}
     - target: {fileID: 366216949304181187, guid: d7bea8510411b064ab6ca7129161344d, type: 3}
       propertyPath: _centrePoint
       value: 
@@ -2107,10 +2111,6 @@ PrefabInstance:
     - target: {fileID: 2710762269273921327, guid: d7bea8510411b064ab6ca7129161344d, type: 3}
       propertyPath: m_Name
       value: DroneLv2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2710762269273921327, guid: d7bea8510411b064ab6ca7129161344d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3374708256079007125, guid: d7bea8510411b064ab6ca7129161344d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4834,7 +4834,7 @@ GameObject:
   - component: {fileID: 1277514060}
   m_Layer: 0
   m_Name: Traps
-  m_TagString: Untagged
+  m_TagString: NoBulletCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9205,6 +9205,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1082201461061323330, guid: e3b0788ffd2fa614ea50151b8762d4e6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 1082201461061323330, guid: e3b0788ffd2fa614ea50151b8762d4e6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.210001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1082201461061323330, guid: e3b0788ffd2fa614ea50151b8762d4e6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2916567120242229878, guid: e3b0788ffd2fa614ea50151b8762d4e6, type: 3}
+      propertyPath: m_Constraints
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409653881332738087, guid: e3b0788ffd2fa614ea50151b8762d4e6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409653881332738087, guid: e3b0788ffd2fa614ea50151b8762d4e6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.210001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409653881332738087, guid: e3b0788ffd2fa614ea50151b8762d4e6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4976188188940544786, guid: e3b0788ffd2fa614ea50151b8762d4e6, type: 3}
       propertyPath: Joystick
       value: 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using static UnityEngine.Rendering.DebugUI.Table;
 
 public class PlayerShooting : MonoBehaviour
 {
@@ -12,7 +13,10 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] float projectileSpeed = 10f;
     [SerializeField] public float BuffTime;
     [SerializeField] public float TempFireRate;
+
     [SerializeField] private NavMeshAgent Player;
+    [SerializeField] private AudioSource _gunshot;
+    [SerializeField] private Transform PlayerTransform;
 
     public float OriginalFireRate;
 
@@ -61,7 +65,6 @@ public class PlayerShooting : MonoBehaviour
                 {
                     Player.transform.LookAt(target.transform);
                     ShootAt(targetObj);
-                    Debug.Log("shot");
                     fireCooldown = 1f / fireRate;
                 }
 
@@ -143,7 +146,9 @@ public class PlayerShooting : MonoBehaviour
         Vector3 direction = (enemy.transform.position - firePoint.position).normalized;
 
         // create the projectile
-        GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.LookRotation(direction));
+        GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.Euler(PlayerTransform.rotation.y, PlayerTransform.rotation.x, PlayerTransform.rotation.z));
+        _gunshot.pitch = (Random.Range(1f, 1.12f));
+        _gunshot.Play();
 
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
         if (rb != null)

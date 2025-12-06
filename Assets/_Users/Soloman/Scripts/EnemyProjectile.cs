@@ -7,6 +7,7 @@ public class EnemyProjectile : MonoBehaviour
 {
     [SerializeField] public float lifetime;
     [SerializeField] public int damage;
+
     void Start()
     {
         Destroy(gameObject, lifetime);
