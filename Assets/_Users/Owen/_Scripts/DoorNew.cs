@@ -8,12 +8,50 @@ public class DoorNew : MonoBehaviour
     public Vector3 _moveTo;
     public Vector3 _originalPos;
 
+    public bool redKeycardDoor;
+    public bool greenKeycardDoor;
+    public bool blueKeycardDoor;
+
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.CompareTag("Player"))
+        if (redKeycardDoor)
         {
-            MoveDoorDown();
+            if (PlayerData.Instance._hasKeycardRed)
+            {
+                if (collision.CompareTag("Player"))
+                {
+                    MoveDoorDown();
+                }
+            }
         }
+        else if (greenKeycardDoor)
+        {
+            if (PlayerData.Instance._hasKeycardGreen)
+            {
+                if (collision.CompareTag("Player"))
+                {
+                    MoveDoorDown();
+                }
+            }
+        }
+        else if (blueKeycardDoor)
+        {
+            if (PlayerData.Instance._hasKeycardBlue)
+            {
+                if (collision.CompareTag("Player"))
+                {
+                    MoveDoorDown();
+                }
+            }
+        }
+        else if (!redKeycardDoor & !blueKeycardDoor & !greenKeycardDoor)
+        {
+            if (collision.CompareTag("Player"))
+            {
+                MoveDoorDown();
+            }
+        }
+
         if (collision.CompareTag("Enemy"))
         {
             MoveDoorDown();
