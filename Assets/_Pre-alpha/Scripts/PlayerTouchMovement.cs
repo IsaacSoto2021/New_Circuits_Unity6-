@@ -113,7 +113,7 @@ public class PlayerTouchMovement : MonoBehaviour
         {
             Player.transform.LookAt(Player.transform.position + scaledMovement, Vector3.up);
         }
-        else if (_playerShooting.target == null)
+        else if (_playerShooting.target == null|| !_playerShooting.IsTargetVisible())
             Player.transform.LookAt(Player.transform.position + scaledMovement, Vector3.up);
 
         Player.Move(scaledMovement);

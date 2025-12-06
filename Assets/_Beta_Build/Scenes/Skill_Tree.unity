@@ -4507,7 +4507,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Crypto: 200
 
-    Crap: 100
+    Scrap: 100
 
     Electronics: 50'
   m_isRightToLeft: 0
@@ -7233,7 +7233,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Crypto: 200
 
-    Crap: 100
+    Scrap: 100
 
     Electronics: 50'
   m_isRightToLeft: 0
@@ -7581,7 +7581,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Crypto: 200
 
-    Crap: 100
+    Scrap: 100
 
     Electronics: 50'
   m_isRightToLeft: 0

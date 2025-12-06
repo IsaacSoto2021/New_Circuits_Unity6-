@@ -1,8 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
-public class Loot : MonoBehaviour
+
+public class Vault : MonoBehaviour
 {
     bool _unOpened = true;
 
@@ -44,12 +44,11 @@ public class Loot : MonoBehaviour
         _ChestLureSFX.loop = false;
         _ChestLureSFX.Stop();
         _ChestAnimator.SetTrigger("Open");
-
-        yield return new WaitForSeconds(.2f);
         _ChestOpenSFX.Play();
-        yield return new WaitForSeconds(.3f);
-
         _ParticleSystem.Stop();
+
+        yield return new WaitForSeconds(3f);
+
 
         SpawnItem1();
         SpawnItem2();

@@ -85,7 +85,6 @@ public class EnemyShooting : MonoBehaviour
         else
         {
             _playerInSight = true;
-            Debug.Log("player seen");
             return true;
         }
     }
