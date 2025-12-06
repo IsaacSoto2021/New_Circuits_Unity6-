@@ -12,6 +12,7 @@ TagManager:
   - Walls
   - FloatingJoystick
   - TouchCanvas
+  - Keycard
   - NoBulletCollision
   layers:
   - Default
