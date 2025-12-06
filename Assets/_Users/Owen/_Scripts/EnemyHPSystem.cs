@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class EnemyHPSystem : MonoBehaviour
 {
-    public int _HP = 100;
-
+    [SerializeField] public int _HP;
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.CompareTag("PlayerProjectile"))
@@ -19,7 +18,6 @@ public class EnemyHPSystem : MonoBehaviour
         _HP -= PlayerData.Instance._damage;
         if (_HP <= 0)
         {
-            ActivateRandomTimes();
             PlayerData.Instance._kills++;
             Destroy(gameObject);
         }

@@ -21,6 +21,10 @@ public class EnemyShooting : MonoBehaviour
     [SerializeField] float maxShotRandomness = 0f; //Maximum angle in degrees
     [SerializeField] bool useRandomness = true;
 
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _gunshotClip;
+
+
     private float fireCooldown = 0f;
     private Transform player;
 
@@ -32,6 +36,7 @@ public class EnemyShooting : MonoBehaviour
         {
             player = playerObj.transform;
         }
+        _audioSource.clip = _gunshotClip;
     }
 
     void Update()
@@ -100,7 +105,9 @@ public class EnemyShooting : MonoBehaviour
             direction = GetRandomizedDirection(direction);
         }
 
-        GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.LookRotation(direction));
+        GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.Euler(firePoint.eulerAngles.x + 90, firePoint.eulerAngles.y, firePoint.eulerAngles.z));
+        _audioSource.pitch = (Random.Range(1f, 1.12f));
+        _audioSource.Play();
 
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
         if (rb != null)

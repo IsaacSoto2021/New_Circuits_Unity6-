@@ -11,6 +11,8 @@ public class LaserTrap : MonoBehaviour
 
     private bool laserActive = false;
 
+    [SerializeField] private AudioSource _audioSource;
+
     void Start()
     {
         if (laserObject == null)
@@ -48,9 +50,10 @@ public class LaserTrap : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
+            _audioSource.Play();
             PlayerData.Instance._Hp -= damageAmount;
             PlayerData.Instance._Hp = Mathf.Max(PlayerData.Instance._Hp, 0);
-            Debug.Log($"Laser hit player! -{damageAmount} HP | Current HP: {PlayerData.Instance._Hp}");
+            Debug.Log($"Laser hit player! - {damageAmount} HP | Current HP: {PlayerData.Instance._Hp}");
         }
 
         if (PlayerData.Instance._Hp <= 0)
