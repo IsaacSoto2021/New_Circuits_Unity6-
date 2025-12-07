@@ -16,7 +16,7 @@ public class PlayerShooting : MonoBehaviour
 
     [SerializeField] private NavMeshAgent Player;
     [SerializeField] private AudioSource _gunshot;
-    [SerializeField] private Transform PlayerTransform;
+    [SerializeField] private Animator _PlayerAnimator;
 
     public float OriginalFireRate;
 
@@ -146,7 +146,7 @@ public class PlayerShooting : MonoBehaviour
         Vector3 direction = (enemy.transform.position - firePoint.position).normalized;
 
         // create the projectile
-        GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.Euler(PlayerTransform.rotation.y, PlayerTransform.rotation.x, PlayerTransform.rotation.z));
+        GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.Euler(firePoint.eulerAngles.x + 90, firePoint.eulerAngles.y, firePoint.eulerAngles.z));
         _gunshot.pitch = (Random.Range(1f, 1.12f));
         _gunshot.Play();
 

@@ -59,11 +59,18 @@ public class PlayerData : Singleton<PlayerData>
         SaveSystem.Load();
     }
 
+    public void LoseKeyCards()
+    {
+        _hasKeycardBlue = false;
+        _hasKeycardGreen = false;
+        _hasKeycardRed = false;
+    }
     public void LoseTempResources()
     {
         _scrapToAdd = 0;
         _electronicsToAdd = 0;
         _cryptoToAdd = 0;
+        LoseKeyCards();
     }
 
     public void GainTempResources()
@@ -77,7 +84,7 @@ public class PlayerData : Singleton<PlayerData>
         Debug.Log("Scrap: " + _scrap);
         Debug.Log("Electronics: " + _electronics);
         Debug.Log("Crypto: " + _crypto);
-
+        LoseKeyCards();
     }
     public void Save(ref PlayerSaveInfo data)
     {

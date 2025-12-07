@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5994818570579977769}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5449136, y: -0.00000005587714, z: 0.000000036313054, w: 0.8384923}
-  m_LocalPosition: {x: 3.56, y: 9.209999, z: -9.5}
+  m_LocalPosition: {x: 3.56, y: 9.210001, z: -9.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -190,7 +190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6916607510730384083, guid: 8b6b63ea45d37134d8b22ff0ab7faa6e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.209999
+      value: 9.210001
       objectReference: {fileID: 0}
     - target: {fileID: 6916607510730384083, guid: 8b6b63ea45d37134d8b22ff0ab7faa6e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -243,6 +243,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8954325865701478731}
     m_Modifications:
+    - target: {fileID: 2634738713148815766, guid: 3cb8ca914a1449d4981136134be8b768, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01127
+      objectReference: {fileID: 0}
+    - target: {fileID: 2634738713148815766, guid: 3cb8ca914a1449d4981136134be8b768, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00535
+      objectReference: {fileID: 0}
+    - target: {fileID: 2634738713148815766, guid: 3cb8ca914a1449d4981136134be8b768, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2634738713148815766, guid: 3cb8ca914a1449d4981136134be8b768, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2634738713148815766, guid: 3cb8ca914a1449d4981136134be8b768, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2634738713148815766, guid: 3cb8ca914a1449d4981136134be8b768, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2634738713148815766, guid: 3cb8ca914a1449d4981136134be8b768, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7442755881441937665, guid: 3cb8ca914a1449d4981136134be8b768, type: 3}
       propertyPath: m_Name
       value: PlayerAnimated
