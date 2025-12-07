@@ -19,7 +19,9 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private Animator _PlayerAnimator;
 
     public float OriginalFireRate;
-
+    private float targetAimWeight;
+    private float currentAimWeight;
+    public float aimSpeed = 5f;
     public bool _shouldLookAtEnemy = false;
 
     //line of sight variables
@@ -55,6 +57,7 @@ public class PlayerShooting : MonoBehaviour
                 if (_targetInSight)
                 {
                     _shouldLookAtEnemy = true;
+                    StartAiming();
                 }
                 else
                 {
@@ -69,6 +72,10 @@ public class PlayerShooting : MonoBehaviour
                 }
 
             }
+        }
+        if (targetObj == null)
+        {
+            StopAiming();
         }
     }
     public void _startAmmoBuff()
@@ -155,6 +162,34 @@ public class PlayerShooting : MonoBehaviour
         {
             rb.linearVelocity = direction * projectileSpeed;
         }
+    }
+
+    public void StartAiming()
+    {
+        targetAimWeight = 1f;
+        StartCoroutine(LerpAimWeight(targetAimWeight));
+    }
+
+    public void StopAiming()
+    {
+        targetAimWeight = 0f;
+        StartCoroutine(LerpAimWeight(targetAimWeight));
+    }
+
+    private IEnumerator LerpAimWeight(float targetWeight)
+    {
+        float startWeight = currentAimWeight;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < 1f)
+        {
+            currentAimWeight = Mathf.Lerp(startWeight, targetWeight, elapsedTime);
+            _PlayerAnimator.SetFloat("Aiming", currentAimWeight);
+            elapsedTime += Time.deltaTime * aimSpeed;
+            yield return null;
+        }
+        currentAimWeight = targetWeight; // Ensure it reaches the target
+        _PlayerAnimator.SetFloat("Aiming", currentAimWeight);
     }
 
 }

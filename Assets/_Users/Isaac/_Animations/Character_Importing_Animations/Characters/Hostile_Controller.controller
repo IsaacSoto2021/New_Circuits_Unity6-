@@ -146,7 +146,7 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
-    m_Name: Airming
+    m_Name: Aiming
     m_StateMachine: {fileID: 6468111801605431041}
     m_Mask: {fileID: 31900000, guid: c768e631cb75d14438eb8acc94c231e9, type: 2}
     m_Motions: []
@@ -251,7 +251,7 @@ AnimatorStateMachine:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Airming
+  m_Name: Aiming
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -3100450593892590622}

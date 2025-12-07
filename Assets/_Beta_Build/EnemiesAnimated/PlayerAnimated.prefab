@@ -315,8 +315,9 @@ MonoBehaviour:
   TempFireRate: 2.6
   Player: {fileID: 2103425276147886252}
   _gunshot: {fileID: 6242568800390987256}
-  _PlayerAnimator: {fileID: 0}
+  _PlayerAnimator: {fileID: 3977026262761607720}
   OriginalFireRate: 0
+  aimSpeed: 5
   _shouldLookAtEnemy: 0
   _sightRange: 7
   _fieldOfView: 360
