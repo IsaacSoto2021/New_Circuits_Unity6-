@@ -8,12 +8,20 @@ public class PlayerTouchMovement : MonoBehaviour
     [SerializeField] private Vector2 JoystickSize = new Vector2(300, 300);
     [SerializeField] private FloatingJoystick Joystick;
     [SerializeField] private NavMeshAgent Player;
-    [SerializeField] public PlayerShooting _playerShooting;
+    [SerializeField] public PlayerShooting PlayerShooting;
+    [SerializeField] public Animator PlayerAnimator;
+    [SerializeField] private float animationSmoothTime = 0.1f;
+    [SerializeField] private float aimingMovementMultiplier = 1f; // can move slower while aiming here
+    private bool isAiming = false;
+
 
     private float BottomMargin = 50;
 
     private Finger MovementFinger;
     private Vector2 MovementAmount;
+    private Vector3 previousPosition;
+    private float currentForwardVelocity;
+    private float currentHorizontalVelocity;
 
     private void OnEnable()
     {
@@ -39,15 +47,9 @@ public class PlayerTouchMovement : MonoBehaviour
             float maxMovement = JoystickSize.x / 2f;
             ETouch.Touch currentTouch = MovedFinger.currentTouch;
 
-            if (Vector2.Distance(
-                    currentTouch.screenPosition,
-                    Joystick.RectTransform.anchoredPosition
-                ) > maxMovement)
+            if (Vector2.Distance(currentTouch.screenPosition, Joystick.RectTransform.anchoredPosition) > maxMovement)
             {
-                knobPosition = (
-                    currentTouch.screenPosition - Joystick.RectTransform.anchoredPosition
-                    ).normalized
-                    * maxMovement;
+                knobPosition = (currentTouch.screenPosition - Joystick.RectTransform.anchoredPosition).normalized * maxMovement;
             }
             else
             {
@@ -82,38 +84,56 @@ public class PlayerTouchMovement : MonoBehaviour
 
         }
     }
-    /*
-    private Vector2 ClampStartPosition(Vector2 StartPosition)
+
+    public void SetAimingMovement(bool aiming)
     {
-        if (StartPosition.x < JoystickSize.x / 2)
-        {
-            StartPosition.x = JoystickSize.x / 2;
-        }
+        isAiming = aiming;
+    }
 
-        if (StartPosition.y < JoystickSize.y / 2)
-        {
-            StartPosition.y = JoystickSize.y / 2;
-        }
-        else if (StartPosition.y > Screen.height - JoystickSize.y / 2)
-        {
-            StartPosition.y = Screen.height - JoystickSize.y / 2;
-        }
+    private void UpdateAnimator()
+    {
+        if (PlayerAnimator == null) return;
 
-        return StartPosition;
-    }*/
+        // Calculate velocity 
+        Vector3 currentPosition = transform.position;
+        Vector3 velocity = (currentPosition - previousPosition) / Time.deltaTime;
+        previousPosition = currentPosition;
 
+        Vector3 localVelocity = transform.InverseTransformDirection(velocity);
+
+        float movementMultiplier = isAiming ? aimingMovementMultiplier : 1f;
+
+        float targetForwardVelocity = (localVelocity.z / Player.speed) * movementMultiplier;
+        float targetHorizontalVelocity = (localVelocity.x / Player.speed) * movementMultiplier;
+
+        currentForwardVelocity = Mathf.Lerp(currentForwardVelocity, targetForwardVelocity,
+                                          Time.deltaTime / animationSmoothTime);
+
+        currentHorizontalVelocity = Mathf.Lerp(currentHorizontalVelocity, targetHorizontalVelocity,
+                                             Time.deltaTime / animationSmoothTime);
+
+        PlayerAnimator.SetFloat("Forward/Back", currentForwardVelocity);
+        PlayerAnimator.SetFloat("Left/Right", currentHorizontalVelocity);
+    }
+
+    private void Update()
+    {
+        UpdateAnimator();
+    }
     private void FixedUpdate()
     {
-        Vector3 scaledMovement = Player.speed * Time.deltaTime * new Vector3(
-            MovementAmount.x,
-            0,
-            MovementAmount.y
-        );
-        if (_playerShooting._shouldLookAtEnemy == false)
+        Vector3 scaledMovement = Player.speed * Time.deltaTime * new Vector3(MovementAmount.x, 0, MovementAmount.y);
+
+        if (isAiming)
+        {
+            scaledMovement *= aimingMovementMultiplier;
+        }
+
+        if (PlayerShooting._shouldLookAtEnemy == false)
         {
             Player.transform.LookAt(Player.transform.position + scaledMovement, Vector3.up);
         }
-        else if (_playerShooting.target == null|| !_playerShooting.IsTargetVisible())
+        else if (PlayerShooting.target == null || !PlayerShooting.IsTargetVisible())
             Player.transform.LookAt(Player.transform.position + scaledMovement, Vector3.up);
 
         Player.Move(scaledMovement);

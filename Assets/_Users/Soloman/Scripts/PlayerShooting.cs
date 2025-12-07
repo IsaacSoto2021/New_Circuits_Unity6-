@@ -18,9 +18,13 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private AudioSource _gunshot;
     [SerializeField] private Animator _PlayerAnimator;
 
+    [SerializeField] private float aimTransitionSpeed = 5f;
+    [SerializeField] private PlayerTouchMovement movementScript; // Reference to movement script
+
+    private float currentAimWeight = 0f;
+    private float targetAimWeight = 0f;
+
     public float OriginalFireRate;
-    private float targetAimWeight;
-    private float currentAimWeight;
     public float aimSpeed = 5f;
     public bool _shouldLookAtEnemy = false;
 
@@ -40,8 +44,29 @@ public class PlayerShooting : MonoBehaviour
     {
         fireCooldown -= Time.deltaTime;
 
-        // get the closest enemy within range
         GameObject targetObj = FindClosestEnemyInRange();
+
+        IsTargetVisible();
+
+        targetAimWeight = _targetInSight ? 1f : 0f;
+
+        currentAimWeight = Mathf.Lerp(currentAimWeight, targetAimWeight,
+                                     Time.deltaTime * aimTransitionSpeed);
+
+        if (_PlayerAnimator != null)
+        {
+            _PlayerAnimator.SetFloat("Aiming", currentAimWeight);
+        }
+
+        if (movementScript != null && _targetInSight)
+        {
+            movementScript.SetAimingMovement(_targetInSight);
+        }
+
+        if (_targetInSight)
+        {
+            StartAiming();
+        }
 
         if (targetObj != null)
         {
@@ -57,7 +82,6 @@ public class PlayerShooting : MonoBehaviour
                 if (_targetInSight)
                 {
                     _shouldLookAtEnemy = true;
-                    StartAiming();
                 }
                 else
                 {
@@ -73,7 +97,7 @@ public class PlayerShooting : MonoBehaviour
 
             }
         }
-        if (targetObj == null)
+        if (targetObj == null || !_targetInSight)
         {
             StopAiming();
         }
@@ -166,7 +190,7 @@ public class PlayerShooting : MonoBehaviour
 
     public void StartAiming()
     {
-        targetAimWeight = 1f;
+        targetAimWeight = .5f;
         StartCoroutine(LerpAimWeight(targetAimWeight));
     }
 

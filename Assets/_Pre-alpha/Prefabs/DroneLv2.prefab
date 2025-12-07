@@ -206,6 +206,7 @@ MonoBehaviour:
   firePoint: {fileID: 6441972232114270502}
   shootRange: 8
   fireRate: 0.5
+  aimSpeed: 5
   projectileSpeed: 6
   _sightRange: 10
   _fieldOfView: 90
@@ -217,6 +218,12 @@ MonoBehaviour:
   useRandomness: 1
   _audioSource: {fileID: 7621046362119817323}
   _gunshotClip: {fileID: 8300000, guid: 946bd280b716da44197723c85bae496e, type: 3}
+  enemyAnimator: {fileID: 0}
+  isAnimated: 0
+  aimTransitionSpeed: 5
+  randomMovement: {fileID: 366216949304181187}
+  enemy: {fileID: 6403316632052525278}
+  shouldLookAtPlayer: 0
 --- !u!114 &366216949304181187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,7 +236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5471833bd259fc94181a60fc91e674b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomMovement
-  agent: {fileID: 0}
+  agent: {fileID: 6403316632052525278}
   _range: 10
   _distance: 0
   _chaseRange: 15
@@ -239,7 +246,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   _playerInSight: 0
-  _centrePoint: {fileID: 0}
+  _centerPoint: {fileID: 0}
+  enemyAnimator: {fileID: 0}
+  isAnimated: 0
+  animationSmoothTime: 0.1
 --- !u!114 &-3490093028076338702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,7 +262,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc5778adbaf19314da2dd7fb1d6b7467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHPSystem
-  _HP: 200
+  _HP: 20000
+  _EnemyRoaming: {fileID: 366216949304181187}
 --- !u!136 &8188398540552592524
 CapsuleCollider:
   m_ObjectHideFlags: 0
