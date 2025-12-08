@@ -325,9 +325,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Move around with the Joystick by tapping and holding anywhere on screen.
-    \n\nDefeat enemies for scrap, and loot Electronics, Scrap, and Crypto from chests
-    around the map to upgrade your charecter. "
+  m_text: "Movement Controlls:\nJoystick\nTapping at the bottom of screen \nHold
+    and then guide around the screen to move.\nInteractions:\nAll interactable objects
+    is character collision. Step into the proximity of object too collect loot \nLoot
+    types \nScrap\nCrypto\nElectronics\nAttacking\nYour character aut o-shoots any
+    enemie in proximity. \nExtraction ( Winning )\nWhile in game you can loot and
+    defeat enemie AI. At any time while you are collecting loot you can leave through
+    the extraction zone. The extraction Zone is a green box. Head into that green
+    box and wait 5 Seconds. In which you will succesfully leave."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a44c444803e215b4b8c2836cdd7da0ab, type: 2}
   m_sharedMaterial: {fileID: -8709908744473100234, guid: a44c444803e215b4b8c2836cdd7da0ab, type: 2}
@@ -336,8 +341,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288282439
-  m_fontColor: {r: 0.2783019, g: 1, b: 0.6018429, a: 1}
+    rgba: 4278255612
+  m_fontColor: {r: 0.98929596, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -354,8 +359,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 13
+  m_fontSizeBase: 13
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
