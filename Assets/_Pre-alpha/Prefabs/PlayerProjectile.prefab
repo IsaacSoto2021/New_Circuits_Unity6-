@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4216381493979794384}
   - component: {fileID: -6272276287511135498}
   - component: {fileID: 5802072285285993886}
-  - component: {fileID: 6406166026429285527}
+  - component: {fileID: 8635132772525751549}
   m_Layer: 0
   m_Name: PlayerProjectile
   m_TagString: PlayerProjectile
@@ -132,8 +132,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 36
   m_CollisionDetection: 0
---- !u!64 &6406166026429285527
-MeshCollider:
+--- !u!136 &8635132772525751549
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -150,7 +150,8 @@ MeshCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -6389274665970787607, guid: 1687e16d0ba4d9c47af0cc771bd4d2a9, type: 3}
+  serializedVersion: 2
+  m_Radius: 0.41803172
+  m_Height: 1.2618765
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.055961408, z: -2.1416291e-16}

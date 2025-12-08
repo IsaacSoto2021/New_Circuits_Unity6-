@@ -9,48 +9,64 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6116127311835032757, guid: ac4b828a93cc35444a9840109c1e4f0b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116127311835032757, guid: ac4b828a93cc35444a9840109c1e4f0b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116127311835032757, guid: ac4b828a93cc35444a9840109c1e4f0b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116127311835032757, guid: ac4b828a93cc35444a9840109c1e4f0b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.5105991
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6116127311835032757, guid: ac4b828a93cc35444a9840109c1e4f0b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.73262316
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6116127311835032757, guid: ac4b828a93cc35444a9840109c1e4f0b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 24.005463
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6116127311835032757, guid: ac4b828a93cc35444a9840109c1e4f0b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6742136
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 6116127311835032757, guid: ac4b828a93cc35444a9840109c1e4f0b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.1542007
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 6116127311835032757, guid: ac4b828a93cc35444a9840109c1e4f0b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071372
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6116127311835032757, guid: ac4b828a93cc35444a9840109c1e4f0b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.14702128
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6116127311835032757, guid: ac4b828a93cc35444a9840109c1e4f0b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 24.573
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6116127311835032757, guid: ac4b828a93cc35444a9840109c1e4f0b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 93.003
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6116127311835032757, guid: ac4b828a93cc35444a9840109c1e4f0b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 1.25
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116127311835032757, guid: ac4b828a93cc35444a9840109c1e4f0b, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8086341583939410650, guid: ac4b828a93cc35444a9840109c1e4f0b, type: 3}
       propertyPath: m_Name
-      value: Key_Card_Red Variant Variant
+      value: KeyCardRed
       objectReference: {fileID: 0}
     - target: {fileID: 8086341583939410650, guid: ac4b828a93cc35444a9840109c1e4f0b, type: 3}
       propertyPath: m_TagString
@@ -63,6 +79,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8086341583939410650, guid: ac4b828a93cc35444a9840109c1e4f0b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4267831814859390467}
+    - targetCorrespondingSourceObject: {fileID: 8086341583939410650, guid: ac4b828a93cc35444a9840109c1e4f0b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2840559063332003217}
   m_SourcePrefab: {fileID: 100100000, guid: ac4b828a93cc35444a9840109c1e4f0b, type: 3}
 --- !u!1 &4985700231129840673 stripped
 GameObject:
@@ -84,3 +103,24 @@ MonoBehaviour:
   red: 1
   green: 0
   blue: 0
+--- !u!65 &2840559063332003217
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4985700231129840673}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.7459626, y: 1.0381353, z: 0.12769595}
+  m_Center: {x: 0, y: 0, z: 0}

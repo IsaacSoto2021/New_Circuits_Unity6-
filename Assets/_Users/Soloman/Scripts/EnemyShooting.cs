@@ -22,6 +22,7 @@ public class EnemyShooting : MonoBehaviour
 
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _gunshotClip;
+    [SerializeField] private bool isCapitan;
 
     // Animation referencesreferences
     [SerializeField] private Animator enemyAnimator;
@@ -34,6 +35,7 @@ public class EnemyShooting : MonoBehaviour
     [SerializeField] private string aimingParam = "Aiming";
     [SerializeField] private float animationSmoothTime = 0.1f;
     [SerializeField] private float aimTransitionSpeed = 5f;
+
 
     private float fireCooldown = 0f;
     private Transform player;
@@ -70,7 +72,6 @@ public class EnemyShooting : MonoBehaviour
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-        // Check if player is in sight range
         if (distanceToPlayer <= _sightRange)
         {
             IsPlayerVisible();
@@ -82,13 +83,17 @@ public class EnemyShooting : MonoBehaviour
 
             if (distanceToPlayer <= shootRange && _playerInSight && fireCooldown <= 0f)
             {
-                ShootAtPlayer();
-                fireCooldown = 1f / fireRate;
-
-                /*if (isAnimated && enemyAnimator != null)
+                if (isCapitan)
                 {
-                    enemyAnimator.SetTrigger("Shoot");
-                }*/
+                    StartCoroutine(CapitanShooting());
+                    fireCooldown = 1f / fireRate;
+
+                }
+                else if (!isCapitan)
+                {
+                    ShootAtPlayer();
+                    fireCooldown = 1f / fireRate;
+                }
             }
         }
         else
@@ -166,6 +171,12 @@ public class EnemyShooting : MonoBehaviour
         }
     }
 
+    IEnumerator CapitanShooting()
+    {
+        ShootAtPlayer();
+        yield return new WaitForSeconds(.2f);
+        ShootAtPlayer();
+    }
     void ShootAtPlayer()
     {
         if (projectilePrefab == null || firePoint == null) return;

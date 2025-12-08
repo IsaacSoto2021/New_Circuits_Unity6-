@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 805871757842194339}
   - component: {fileID: 5872102270514737853}
   - component: {fileID: 64664963232180481}
-  - component: {fileID: 8156284419257120170}
+  - component: {fileID: 1256632610874715292}
   m_Layer: 0
   m_Name: EnemyProjectile20
   m_TagString: EnemyProjectile20
@@ -133,8 +133,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
---- !u!64 &8156284419257120170
-MeshCollider:
+--- !u!136 &1256632610874715292
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -151,7 +151,8 @@ MeshCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -6389274665970787607, guid: 1687e16d0ba4d9c47af0cc771bd4d2a9, type: 3}
+  serializedVersion: 2
+  m_Radius: 0.41803172
+  m_Height: 1.3046963
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.07737149, z: -5.792697e-16}

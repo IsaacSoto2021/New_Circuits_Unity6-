@@ -8,7 +8,7 @@ public class KeycardPickup : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Keycard"))
+        if (other.CompareTag("Player"))
         {
             if (red)
             {
@@ -26,17 +26,5 @@ public class KeycardPickup : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-    }
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
