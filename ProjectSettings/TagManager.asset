@@ -17,6 +17,7 @@ TagManager:
   - Locked_Red
   - Locked_Green
   - Locked_Blue
+  - Spawn
   layers:
   - Default
   - TransparentFX

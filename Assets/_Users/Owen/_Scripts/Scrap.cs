@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Scrap : MonoBehaviour
 {
-    [SerializeField] int _value;
+    [SerializeField] private int _value;
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.CompareTag("Player"))

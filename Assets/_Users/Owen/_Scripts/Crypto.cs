@@ -5,13 +5,13 @@ using static UnityEngine.Rendering.DebugUI;
 
 public class Crypto : MonoBehaviour
 {
+    [SerializeField] private int value;
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.CompareTag("Player"))
         {
-            int _value = Random.Range(4, 12);
-            PlayerData.Instance._cryptoToAdd += _value;
-            Debug.Log("Crypto picked up: " + _value);
+            PlayerData.Instance._cryptoToAdd += value;
+            Debug.Log("Crypto picked up: " + value);
             Destroy(gameObject);
         }
     }

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Electronics : MonoBehaviour
 {
-    [SerializeField] int _value;
+    [SerializeField] private int _value;
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.CompareTag("Player"))

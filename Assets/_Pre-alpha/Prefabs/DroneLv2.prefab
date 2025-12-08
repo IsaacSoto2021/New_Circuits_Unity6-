@@ -264,8 +264,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc5778adbaf19314da2dd7fb1d6b7467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHPSystem
-  _HP: 200
+  _HP: 225
   _EnemyRoaming: {fileID: 366216949304181187}
+  DropLocation: {fileID: 0}
+  Dropheight: {fileID: 0}
+  KeycardDrop: 0
+  Keycard: {fileID: 0}
 --- !u!136 &8188398540552592524
 CapsuleCollider:
   m_ObjectHideFlags: 0

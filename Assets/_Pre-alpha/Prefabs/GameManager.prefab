@@ -45,8 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 430134da9e5d33941acf62db1537adac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 7553875999705753665, guid: db99381695efa514d8cbc2f09b7285c2, type: 3}
-  _spawnPoint: {x: -1.02, y: 1.29, z: 10.07}
+  Player: {fileID: 0}
+  _spawnPoint: {fileID: 376226540603435078, guid: 607b27a9942f57941a5a6562f6f0aa29, type: 3}
+  _spawnPointObj: {fileID: 1297774961717048315, guid: 607b27a9942f57941a5a6562f6f0aa29, type: 3}
 --- !u!114 &2686249232162998596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,7 +67,20 @@ MonoBehaviour:
   _scrap: 0
   _crypto: 0
   _electronics: 0
+  _kills: 0
+  _runs: 0
   _scrapToAdd: 0
   _cryptoToAdd: 0
   _electronicsToAdd: 0
-  _hasKeycard: 0
+  _hasKeycardRed: 0
+  _hasKeycardBlue: 0
+  _hasKeycardGreen: 0
+  _hasUncDamage: 0
+  _hasRareDamage: 0
+  _hasEpicDamage: 0
+  _hasUncSpeed: 0
+  _hasRareSpeed: 0
+  _hasEpicSpeed: 0
+  _hasUncHP: 0
+  _hasRareHP: 0
+  _hasEpicHP: 0
