@@ -325,14 +325,36 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Movement Controlls:\nJoystick\nTapping at the bottom of screen \nHold
-    and then guide around the screen to move.\nInteractions:\nAll interactable objects
-    is character collision. Step into the proximity of object too collect loot \nLoot
-    types \nScrap\nCrypto\nElectronics\nAttacking\nYour character aut o-shoots any
-    enemie in proximity. \nExtraction ( Winning )\nWhile in game you can loot and
-    defeat enemie AI. At any time while you are collecting loot you can leave through
-    the extraction zone. The extraction Zone is a green box. Head into that green
-    box and wait 5 Seconds. In which you will succesfully leave."
+  m_text: 'Movement Controlls:
+
+    TouchScreen ( Joystick)
+
+    Located at the bottom
+    of your screen is a Ui Box, in that box touch with your tumb to activate joystick,
+    While holding joystick, guide with your thumb around the box area to move.
+
+
+    Interactions:
+
+    All
+    Looting interactions is collision based. Move your character to a chest proximity
+    to (Open) and collect loot. Loot types : Crypto, Scrap, Electronics, Healing
+    Kit.
+
+
+    Attacking
+
+    All attacking is auto, No need to have a button to
+    shoot and move.  when character sees enemy they fire.
+
+
+    Extraction ( Winning
+    )
+
+    While in game you can loot and defeat enemie AI. At any time while you
+    are collecting loot you can leave through the extraction zone. The extraction
+    Zone is a green box. Head into that green box and wait 5 Seconds. In which you
+    will succesfully leave.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a44c444803e215b4b8c2836cdd7da0ab, type: 2}
   m_sharedMaterial: {fileID: -8709908744473100234, guid: a44c444803e215b4b8c2836cdd7da0ab, type: 2}
@@ -341,8 +363,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278255612
-  m_fontColor: {r: 0.98929596, g: 1, b: 0, a: 1}
+    rgba: 4278255476
+  m_fontColor: {r: 0.4552704, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -359,13 +381,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 13
-  m_fontSizeBase: 13
+  m_fontSize: 11
+  m_fontSizeBase: 11
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -663,7 +685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
