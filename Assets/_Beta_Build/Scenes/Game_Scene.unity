@@ -1180,12 +1180,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< Updated upstream
   m_text: '
 
     Settings
 
 
 '
+=======
+  m_text: Settings
+>>>>>>> Stashed changes
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a44c444803e215b4b8c2836cdd7da0ab, type: 2}
   m_sharedMaterial: {fileID: -8709908744473100234, guid: a44c444803e215b4b8c2836cdd7da0ab, type: 2}

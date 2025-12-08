@@ -8,9 +8,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 65720869512169984, guid: d95ce01d9d58e2646aa8a6d92bb772c6, type: 3}
+      propertyPath: _HP
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 3472197140541481965, guid: d95ce01d9d58e2646aa8a6d92bb772c6, type: 3}
       propertyPath: m_Name
-      value: AnimEnemyBase
+      value: EnemyMAWAnimated
       objectReference: {fileID: 0}
     - target: {fileID: 4279660220372384087, guid: d95ce01d9d58e2646aa8a6d92bb772c6, type: 3}
       propertyPath: m_LocalPosition.x
