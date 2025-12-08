@@ -1181,12 +1181,16 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_text: '
 
     Settings
 
 
 '
+=======
+  m_text: Settings
+>>>>>>> Stashed changes
 =======
   m_text: Settings
 >>>>>>> Stashed changes
