@@ -8,6 +8,7 @@ public class GameManager : Singleton<GameManager>
 {
     public NavMeshAgent Player;
     private GameObject _playerRef;
+    public int SceneIndexGoTo = 1;
 
     [SerializeField] Vector3 _spawnPoint;
 
@@ -60,7 +61,7 @@ public class GameManager : Singleton<GameManager>
     public void GameScene()
     {
         Time.timeScale = 1.0f;
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(SceneIndexGoTo);
         //_playerRef = GameObject.FindWithTag("Player");
         //Player = _playerRef.GetComponent<NavMeshAgent>();
         //ResetPos();
