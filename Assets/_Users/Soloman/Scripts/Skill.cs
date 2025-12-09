@@ -45,13 +45,11 @@ public class Skill
     {
         if (unlocked)
         {
-            Debug.Log($"{skillName} already unlocked!");
             return;
         }
 
         if (!CanUnlock())
         {
-            Debug.Log($"Cannot unlock {skillName} — missing prerequisites or not enough currency!");
             return;
         }
 
@@ -63,23 +61,19 @@ public class Skill
         unlocked = true;
         skillButton.interactable = false;
 
-        Debug.Log($"{skillName} unlocked! Cost: {scrapCost} scrap, {electronicsCost} electronics, {cryptoCost} crypto.");
 
         // Apply effects based on tag
         if (skillButton.CompareTag("MaxHpUpgrade"))
         {
             PlayerData.Instance._maxHp += 50;
-            Debug.Log("max hp increased to " + PlayerData.Instance._maxHp);
         }
         else if (skillButton.CompareTag("SpeedUpgrade"))
         {
             PlayerData.Instance._moveSpeed += 0.5f;
-            Debug.Log("speed increased to " + PlayerData.Instance._moveSpeed);
         }
         else if (skillButton.CompareTag("DamageUpgrade"))
         {
             PlayerData.Instance._damage += 25;
-            Debug.Log("damage increased to " + PlayerData.Instance._damage);
         }
     }
 }

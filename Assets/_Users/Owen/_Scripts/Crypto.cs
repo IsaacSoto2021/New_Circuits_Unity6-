@@ -11,7 +11,6 @@ public class Crypto : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             PlayerData.Instance._cryptoToAdd += value;
-            Debug.Log("Crypto picked up: " + value);
             Destroy(gameObject);
         }
     }

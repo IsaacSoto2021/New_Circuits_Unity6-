@@ -50,7 +50,6 @@ public class PlayerData : Singleton<PlayerData>
     public void SetValues()
     {
         _Hp = _maxHp;
-        Debug.Log("setvals");
     }
 
     private void Start()
@@ -81,9 +80,6 @@ public class PlayerData : Singleton<PlayerData>
         _cryptoToAdd = 0;
         _electronics += _electronicsToAdd;
         _electronicsToAdd = 0;
-        Debug.Log("Scrap: " + _scrap);
-        Debug.Log("Electronics: " + _electronics);
-        Debug.Log("Crypto: " + _crypto);
         LoseKeyCards();
     }
     public void Save(ref PlayerSaveInfo data)

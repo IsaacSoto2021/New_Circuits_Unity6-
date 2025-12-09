@@ -103,6 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f99ce4bc280d4fc46809549683cd1701, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Crypto
+  value: 8
 --- !u!135 &7849776474981256896
 SphereCollider:
   m_ObjectHideFlags: 0

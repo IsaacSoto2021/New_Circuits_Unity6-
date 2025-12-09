@@ -8,7 +8,7 @@ public class RandomMovement : MonoBehaviour
     public float _distance; //distance to player
     public float _chaseRange = 15; //radius of chase
     public float _sightRange = 10f;
-    public float _fieldOfView = 110f;
+    public float _fieldOfView = 90;
 
     public LayerMask _obstacleLayer;
     public bool _playerInSight = false;
@@ -46,20 +46,7 @@ public class RandomMovement : MonoBehaviour
 
         _distance = Vector3.Distance(this.transform.position, _player.position);
 
-        // Use the visibility check from EnemyShooting script if available
-        if (enemyShooting != null)
-        {
-            _playerInSight = enemyShooting._playerInSight;
-        }
-        else
-        {
-            // Fallback to own visibility check
-            if (!_playerInSight)
-            {
-                IsPlayerVisible();
-            }
-        }
-
+        IsPlayerVisible();
         // Chase player if in sight and within chase range
         if (_distance < _chaseRange && _playerInSight)
         {

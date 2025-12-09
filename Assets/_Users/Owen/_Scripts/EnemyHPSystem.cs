@@ -24,7 +24,8 @@ public class EnemyHPSystem : MonoBehaviour
     public void TakeDamage()
     {
         _HP -= PlayerData.Instance._damage;
-        StartCoroutine(LOSBuffOnDamage());
+        _EnemyRoaming._fieldOfView = 360f;
+        _EnemyRoaming._playerInSight = true;
         if (_HP <= 0)
         {
             if (KeycardDrop)
@@ -34,13 +35,6 @@ public class EnemyHPSystem : MonoBehaviour
             PlayerData.Instance._kills++;
             Destroy(gameObject);
         }
-    }
-
-    IEnumerator LOSBuffOnDamage()
-    {
-        _EnemyRoaming._fieldOfView = 360f;
-        yield return new WaitForSeconds(1.5f);
-        _EnemyRoaming._fieldOfView = 110f;
     }
 
     public void DropKeyCard()

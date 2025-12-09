@@ -10,7 +10,6 @@ public class Scrap : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             PlayerData.Instance._scrapToAdd += _value;
-            Debug.Log("Loot picked up: " + _value);
             Destroy(gameObject);
         }
     }

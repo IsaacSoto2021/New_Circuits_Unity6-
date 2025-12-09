@@ -128,6 +128,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1536365721747902288, guid: e113af0a27f74224da2bc9d71549c645, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -525
+      objectReference: {fileID: 0}
     - target: {fileID: 6679197172189345470, guid: e113af0a27f74224da2bc9d71549c645, type: 3}
       propertyPath: m_Camera
       value: 
@@ -136,6 +140,10 @@ PrefabInstance:
       propertyPath: _pauseMenu
       value: 
       objectReference: {fileID: 2668825906137203307}
+    - target: {fileID: 8243340210434248449, guid: e113af0a27f74224da2bc9d71549c645, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -190
+      objectReference: {fileID: 0}
     - target: {fileID: 8467461143184565043, guid: e113af0a27f74224da2bc9d71549c645, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -165,7 +173,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1082201461061323330, guid: e3b0788ffd2fa614ea50151b8762d4e6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.5599995
+      value: 3.56
       objectReference: {fileID: 0}
     - target: {fileID: 1082201461061323330, guid: e3b0788ffd2fa614ea50151b8762d4e6, type: 3}
       propertyPath: m_LocalPosition.y

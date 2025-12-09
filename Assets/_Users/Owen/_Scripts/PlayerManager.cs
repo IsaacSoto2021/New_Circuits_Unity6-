@@ -10,10 +10,6 @@ public class PlayerManager : MonoBehaviour //this is currently ONLY MOVE SPEED
     {
         player = GameObject.FindWithTag("Player");
         NavMeshAgent playerAgent = player.GetComponent<NavMeshAgent>();
-        if (player == null)
-        {
-            Debug.Log("no agent component found");
-        }
         playerAgent.speed = PlayerData.Instance._moveSpeed;
     }
 

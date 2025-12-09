@@ -17,7 +17,6 @@ public class LaserTrap : MonoBehaviour
     {
         if (laserObject == null)
         {
-            Debug.LogError("LaserTrap: No laserObject assigned!");
             return;
         }
 
@@ -53,7 +52,6 @@ public class LaserTrap : MonoBehaviour
             _audioSource.Play();
             PlayerData.Instance._Hp -= damageAmount;
             PlayerData.Instance._Hp = Mathf.Max(PlayerData.Instance._Hp, 0);
-            Debug.Log($"Laser hit player! - {damageAmount} HP | Current HP: {PlayerData.Instance._Hp}");
         }
 
         if (PlayerData.Instance._Hp <= 0)

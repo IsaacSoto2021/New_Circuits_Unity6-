@@ -8,7 +8,6 @@ public class AmmoItem : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("ammo picked up");
             PlayerShooting playerShooting = collision.gameObject.GetComponent<PlayerShooting>();
             if (playerShooting != null)
             {

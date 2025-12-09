@@ -8,7 +8,6 @@ public class HealthItem : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             PlayerData.Instance._Hp += 50;
-            Debug.Log("Heal item grabbed");
             Destroy(gameObject);
 
         }

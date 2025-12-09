@@ -8,7 +8,6 @@ public class Electronics : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             PlayerData.Instance._electronicsToAdd += _value;
-            Debug.Log("Electronics picked up: " + _value);
             Destroy(gameObject);
         }
     }

@@ -221,7 +221,6 @@ public class SkillTreeManager : MonoBehaviour
             PlayerData.Instance._crypto -= 200;
             PlayerData.Instance._damage += 25;
             PlayerData.Instance._hasUncDamage = true;
-            Debug.Log(PlayerData.Instance._crypto + PlayerData.Instance._damage);
             DisableAllPopups();
 
         }
@@ -234,7 +233,6 @@ public class SkillTreeManager : MonoBehaviour
             PlayerData.Instance._crypto -= 200;
             PlayerData.Instance._moveSpeed += 0.5f;
             PlayerData.Instance._hasUncSpeed = true;
-            Debug.Log(PlayerData.Instance._crypto + PlayerData.Instance._moveSpeed);
             DisableAllPopups();
 
         }
@@ -247,7 +245,6 @@ public class SkillTreeManager : MonoBehaviour
             PlayerData.Instance._maxHp += 20;
             PlayerData.Instance._hasUncHP = true;
 
-            Debug.Log(PlayerData.Instance._crypto + PlayerData.Instance._maxHp);
             DisableAllPopups();
 
         }
@@ -261,7 +258,6 @@ public class SkillTreeManager : MonoBehaviour
             PlayerData.Instance._damage += 25;
             PlayerData.Instance._hasRareDamage = true;
 
-            Debug.Log(PlayerData.Instance._crypto + PlayerData.Instance._scrap + PlayerData.Instance._damage);
             DisableAllPopups();
 
         }
@@ -275,7 +271,6 @@ public class SkillTreeManager : MonoBehaviour
             PlayerData.Instance._moveSpeed += 0.5f;
             PlayerData.Instance._hasRareSpeed = true;
 
-            Debug.Log(PlayerData.Instance._crypto + PlayerData.Instance._scrap + PlayerData.Instance._moveSpeed);
             DisableAllPopups();
 
         }
@@ -289,7 +284,6 @@ public class SkillTreeManager : MonoBehaviour
             PlayerData.Instance._maxHp += 20;
             PlayerData.Instance._hasRareHP = true;
 
-            Debug.Log(PlayerData.Instance._crypto + PlayerData.Instance._scrap + PlayerData.Instance._maxHp);
             DisableAllPopups();
 
         }
@@ -304,7 +298,6 @@ public class SkillTreeManager : MonoBehaviour
             PlayerData.Instance._damage += 25;
             PlayerData.Instance._hasEpicDamage = true;
 
-            Debug.Log(PlayerData.Instance._crypto + PlayerData.Instance._scrap + PlayerData.Instance._electronics + PlayerData.Instance._damage);
             DisableAllPopups();
 
         }
@@ -319,7 +312,6 @@ public class SkillTreeManager : MonoBehaviour
             PlayerData.Instance._moveSpeed += 1f;
             PlayerData.Instance._hasEpicSpeed = true;
 
-            Debug.Log(PlayerData.Instance._crypto + PlayerData.Instance._scrap + PlayerData.Instance._electronics + PlayerData.Instance._moveSpeed);
             DisableAllPopups();
 
         }
@@ -334,7 +326,6 @@ public class SkillTreeManager : MonoBehaviour
             PlayerData.Instance._maxHp += 40;
             PlayerData.Instance._hasEpicHP = true;
 
-            Debug.Log(PlayerData.Instance._crypto + PlayerData.Instance._scrap + PlayerData.Instance._electronics + PlayerData.Instance._maxHp);
             DisableAllPopups();
 
         }

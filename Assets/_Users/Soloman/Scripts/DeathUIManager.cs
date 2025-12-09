@@ -15,7 +15,6 @@ public class DeathUIManager : MonoBehaviour
 
         if (deathUIText == null)
         {
-            Debug.LogError("DeathUIManager: No TextMeshProUGUI component assigned!");
         }
     }
 

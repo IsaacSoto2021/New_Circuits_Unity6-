@@ -112,7 +112,6 @@ public class PlayerShooting : MonoBehaviour
         fireRate = TempFireRate;
         yield return new WaitForSeconds(BuffTime);
         fireRate = OriginalFireRate;
-        Debug.Log("powerup over");
     }
     GameObject FindClosestEnemyInRange()
     {

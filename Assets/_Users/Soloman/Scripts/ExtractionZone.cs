@@ -36,7 +36,6 @@ public class ExtractionZone : MonoBehaviour
 
             if (timer >= requiredTimeInZone)
             {
-                Debug.Log("Player extracted!");
                 PlayerData.Instance.GainTempResources();
                 SceneManager.LoadScene(5);
             }

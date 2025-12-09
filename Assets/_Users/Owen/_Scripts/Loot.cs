@@ -65,7 +65,6 @@ public class Loot : MonoBehaviour
             if (spawnChance <= 10)
             {
                 GameObject Item1 = Instantiate(_Item1, _SpawnPos1);
-                Debug.Log("Item 1");
             }
             spawnChance = 0;
         }
@@ -78,7 +77,6 @@ public class Loot : MonoBehaviour
             if (spawnChance <= 10)
             {
                 GameObject Item2 = Instantiate(_Item2, _SpawnPos2);
-                Debug.Log("Item 2");
             }
             spawnChance = 0;
 
@@ -93,7 +91,6 @@ public class Loot : MonoBehaviour
             if (spawnChance <= 10)
             {
                 GameObject Item3 = Instantiate(_Item3, _SpawnPos3);
-                Debug.Log("Item 3");
             }
             spawnChance = 0;
 
@@ -107,7 +104,6 @@ public class Loot : MonoBehaviour
             if (spawnChance <= 10)
             {
                 GameObject Item4 = Instantiate(_Item4, _SpawnPos4);
-                Debug.Log("Item 4");
 
             }
             spawnChance = 0;
@@ -122,7 +118,6 @@ public class Loot : MonoBehaviour
             if (spawnChance <= 10)
             {
                 GameObject Item5 = Instantiate(_Item5, _SpawnPos5);
-                Debug.Log("Item 5");
 
             }
             spawnChance = 0;
