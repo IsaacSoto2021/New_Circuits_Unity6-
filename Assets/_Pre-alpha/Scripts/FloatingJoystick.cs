@@ -4,7 +4,6 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class FloatingJoystick : MonoBehaviour
 {
-    [HideInInspector]
     public RectTransform RectTransform;
     public RectTransform Knob;
 

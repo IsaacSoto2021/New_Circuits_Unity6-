@@ -4,7 +4,7 @@ using UnityEngine.InputSystem.EnhancedTouch;
 using ETouch = UnityEngine.InputSystem.EnhancedTouch;
 
 public class PlayerTouchMovement : MonoBehaviour
-{
+{   //CHANGE BOTTOM MARGIN TO MOVE JOYSTICK
     [SerializeField] private Vector2 JoystickSize = new Vector2(300, 300);
     [SerializeField] private FloatingJoystick Joystick;
     [SerializeField] private NavMeshAgent Player;
@@ -15,7 +15,7 @@ public class PlayerTouchMovement : MonoBehaviour
     private bool isAiming = false;
 
 
-    private float BottomMargin = 50;
+    [SerializeField] private float BottomMargin = 200;
 
     private Finger MovementFinger;
     private Vector2 MovementAmount;
